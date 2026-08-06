@@ -1,2 +1,7 @@
 _data/
 *.csv
+*.xlsx
+*.xls
+*.json
+*.tsv
+*.parquet
