@@ -1,15 +1,39 @@
-# Mitchell Bloom — PropStream Filter Spec
+# Mitchell Bloom — PropStream Filter Spec (Trophy / Luxury HOMES — Campaign 4)
+
+> **⚠️ SCOPE — read before using this doc.**
+> This is the **trophy / luxury home** spec: Single Family, Condo, Seasonal/Vacation. Somebody's **home**. It is **Campaign 4, Phase 2** in the launch order and is **not** the launch campaign.
+>
+> **Terminology warning — the word "residential" is ambiguous here, do not rely on it:**
+> - This segment used to be called "Trophy / **Residential** Owners," and the copy filenames still are (`Copy/Vertical 1. Trophy-Residential Owners…`).
+> - But **PropStream's own UI** uses "Residential" as a top-level property **tab**, and that tab contains a **Multi-Family** sub-section holding duplexes, triplexes and apartment buildings — which belong to **Campaign 1**, not here.
+> - So "Residential" names both this segment *and* the tab Campaign 1 works inside. **Disambiguate by property type, never by the word residential:** this doc = Single Family / Condo / Seasonal. Campaign 1 = Multi-Family / MHP / Commercial.
+> **For Campaign 1** (apartment / rental / MHP / commercial sellers, the current launch priority) the paste-ready configs are in **`Leads/Mitchell Bloom - PropStream Filters Launch.md`** ← that is the doc to run. Use this doc for method and rationale only. Do not run these property types for Campaign 1.
 
 **ICP:** Vertical 1, Trophy / Residential Owners
 **Feeds:** `Copy/Vertical 1. Trophy-Residential Owners (No Selling Signals).md` and `(Selling Signals).md`
 **Sequencer:** Instantly · **Merge field needed:** first name + email
 **Built:** 2026-07-21, from the July 14 strategy call, the 2nd analysis (ICP-B), and the intake avatar.
+**Updated:** 2026-07-29 — timing flipped to on-market-first per Mitch's comment on the copy doc; duplicate market lists merged; troubleshooting contradiction fixed.
+
+---
+
+## ⭐ Timing update (2026-07-29) — supersedes the on/off-market ordering below
+
+Mitchell, comment on the copy doc: *"Very good. Would be optimal to find properties just listed and/or pending."*
+
+- **List B (On Market) is now the PRIMARY list**, not the secondary one. Just listed, under contract, pending.
+- **List A (Off Market) is the secondary volume backfill**, run where List B comes back thin.
+- **Pending is now included**, as its own separate saved search. Mitch named it explicitly. The counter-argument still stands and is worth watching: residential pending typically closes in ~30 days, the sequence runs 12+ days, and the structure must be in place **before** close, so a share of pending records will already be too late. Keeping it separate makes that visible in the numbers instead of assumed.
+
+Everywhere below that calls List A "primary, higher volume," read it as **higher volume but secondary in priority**. The volume claim is still true. The priority claim is not.
 
 ---
 
 ## Target markets — build one saved search per city
 
-Cities in **bold** are the go-first pick per state (highest embedded-gain density + cleanest individual ownership). Search the small enclaves by name; search big metros by **ZIP**, not city name.
+**This is the only market list in this doc.** Cities in **bold** are the go-first pick per state (highest embedded-gain density + cleanest individual ownership).
+
+**Name vs ZIP:** search the small enclaves **by name**. The two entries that are full metros — **Manhattan NY** and **San Francisco CA** — must be searched **by ZIP**, not city name, or the count balloons with non-target housing stock. Manhattan: 10021, 10023, 10024, 10028, 10065, 10075, 10128, 10011, 10014. San Francisco: 94123, 94115, 94118, 94109, 94133.
 
 ### Tier 1 — build first
 
@@ -17,6 +41,7 @@ Cities in **bold** are the go-first pick per state (highest embedded-gain densit
 - **Beverly Hills** · **Malibu** · **Montecito** · Bel Air · Pacific Palisades · Santa Barbara
 - **Atherton** · Hillsborough · Los Altos · Woodside
 - Newport Beach · Rancho Santa Fe · La Jolla
+- San Francisco *(by ZIP — see above)*
 
 **Colorado** — Mitch's home turf, best expected reply rates
 - **Vail** · **Aspen** · Snowmass Village · Breckenridge
@@ -39,6 +64,8 @@ Cities in **bold** are the go-first pick per state (highest embedded-gain densit
 - **Vermont** (8.75%) — Stowe · Manchester
 - **Wisconsin** (7.65%) — Lake Geneva
 
+> **⚠️ Greenwich CT — do not build without a decision.** Greenwich appears in the Estimated Value tier table below, but **Connecticut is not on the agreed target-state list** (CA · NY · NJ · MA · MN · HI · WI · VT · DC · CO, per `Leads/Mitchell Bloom - ICP Hierarchy & List-Building.md`). CT does have a high income tax (~6.99%), so it likely belongs — but add the state deliberately rather than inheriting it from a stray table row.
+
 ### Do NOT build
 Fisher Island FL and anything in **TX / TN / WA / NV / FL**. No state income tax means the pitch loses ~10 points of urgency, and the copy leans on "the state and the IRS."
 
@@ -60,7 +87,8 @@ Do this in order. **After each panel, watch the count at the top.** If it hits 0
 | 6 | Owner Info & Occupancy | **Pre-Probate** | **Exclude** |
 | 7 | Owner Info & Occupancy | **Vacant** | **No** |
 | 8 | Owner Info & Occupancy | **Intra-Family Transfer** | **Exclude** |
-| 9 | MLS | **On or Off Market** | **Off Market** — then leave every MLS Status blank (List A) |
+| 9 | MLS | **On or Off Market** | **On Market** (List B, the primary list per Mitch) — then **Listing Type: For Sale** and **MLS Status: Active · Active Under Contract · Coming Soon · Contingent**. Run **Pending** as a separate saved search. |
+| 9b | MLS | *backfill run only* | **Off Market** (List A) — then **clear every MLS Status**. Use where the On Market count is thin. |
 
 **Leave blank:** Last Sale Price, Year Built, Estimated Equity %, Owner Occupied, Include Unknown Sales Dates, everything in PropStream Intelligence / Pre-Foreclosure / Lien-Bankruptcy-Divorce.
 
@@ -68,7 +96,7 @@ Do this in order. **After each panel, watch the count at the top.** If it hits 0
 - **Off Market + any MLS Status selected = 0 across every city.** A property cannot be off market AND actively listed. When the toggle is Off Market, all statuses must be clear.
 - **Listing Type resets to "Any" or "For Rent"** whenever you flip the On/Off toggle. If you build List B (On Market), set Listing Type to **For Sale** or you will pull rental listings ($15k–$25k "list price" = monthly rent, not a sale).
 
-**For List B (Selling Signals) in Beverly Hills:** same as above but step 9 = **On Market**, **Listing Type: For Sale**, **MLS Status: Active · Active Under Contract · Coming Soon · Contingent** (not Pending). Expect this list to be a fraction the size of List A — that is normal.
+**For List A (No Selling Signals) in Beverly Hills:** same as above but step 9 = **Off Market** with **every MLS Status cleared**. This is the higher-volume list (1,508 records) but it is now the **secondary** one. Run it as backfill.
 
 **If Beverly Hills returns under ~20:** drop Estimated Value min to $2.5M, then Years of Ownership 25 → 20. Do not touch the exclusions.
 
@@ -176,20 +204,20 @@ Skip beds, baths, square footage, lot size. They say nothing about capital gain.
 
 **Panel:** MLS
 
-### List A — No Selling Signals (primary, higher volume)
-- **On or Off Market:** `Off Market`
-- MLS Status: clear all
-
-Feeds `Vertical 1. Trophy-Residential Owners (No Selling Signals).md`. These owners are off market **because** of the tax hit, which is exactly the angle the copy leads with.
-
-### List B — Selling Signals (smaller, hotter)
+### List B — Selling Signals ⭐ **PRIMARY (build this first)**
 - **On or Off Market:** `On Market`
 - **Listing Type:** `For Sale` *(never "Any" — that pulls in For Rent)*
 - **MLS Status:** Active, Active Under Contract, Coming Soon, Contingent
-- ❌ **Not Pending** — residential pending closes in ~30 days, the sequence runs 12+ days, and the structure must be in place **before** close. Likely already too late.
+- **Pending:** run as a **separate saved search** (`MLS Status: Pending` only). Included per Mitch's July 29 instruction. Track its reply rate separately, since a share of these are past the point where the structure can be set up.
 - ❌ Not Canceled, Expired, Failed, Withdrawn, Sold
 
-Feeds `(Selling Signals).md`. Expect this list to be roughly 5-10% the size of List A. That is normal and correct.
+Feeds `(Selling Signals).md`. Expect roughly **5-10% the size of List A**. That is normal and correct — it is a small, high-intent list by design. Get volume by running more markets, not by loosening filters.
+
+### List A — No Selling Signals (secondary, higher volume, backfill)
+- **On or Off Market:** `Off Market`
+- MLS Status: clear all
+
+Feeds `Vertical 1. Trophy-Residential Owners (No Selling Signals).md`. These owners are off market **because** of the tax hit, which is exactly the angle that copy leads with. Still the bigger list by an order of magnitude, but demoted to secondary: Mitch wants listed and pending led with.
 
 Leave MLS Status Date, Days on Market, MLS Listing Amount, Listed Below Market Price, and MLS Keywords blank. Keywords in particular ("motivated seller," "as-is") pull toward distress.
 
@@ -233,29 +261,13 @@ Leave MLS Status Date, Days on Market, MLS Listing Amount, Listed Below Market P
 
 ---
 
-## Market list — build one saved search per market
+## Volume expectations per market
 
-This is a **multi-market campaign**. A single city yields dozens, not thousands. Expect 20-60 qualified owners per market, so 20 markets ≈ 500-1,000 leads.
+*(The market list itself lives in a single place: **Target markets** at the top of this doc. There is no second list. An earlier version of this doc carried two overlapping lists that did not match — merged 2026-07-29.)*
 
-**Tier 1 — high state income tax + Mitch's named targets**
+This is a **multi-market campaign**. A single city yields dozens, not thousands. Expect **20-60 qualified owners per market on List A (off market)** and **1-5 per market on List B (on market)**. Across the ~35 Tier 1 + Tier 2 markets that is roughly 700-2,000 on List A and well under 200 on List B.
 
-*California*
-Beverly Hills · Bel Air · Malibu · Pacific Palisades · Montecito · Santa Barbara · Atherton · Los Altos · Hillsborough · Rancho Santa Fe · Newport Beach · San Francisco
-
-*Colorado (home turf, best expected reply rates)*
-Vail · Aspen · Snowmass Village · Breckenridge · Cherry Hills Village · Boulder
-
-*New York*
-Manhattan · Sagaponack · Water Mill · Bridgehampton · East Hampton · Scarsdale · Rye
-
-*Hawaii* — Mitch @21:53: *"sellers in Hawaii... they pay through the nose."*
-Maui (Wailea, Kapalua) · Kailua-Kona · Honolulu (Kahala)
-
-**Tier 2**
-Greenwich CT · Wellesley, Weston, Nantucket MA · Alpine, Saddle River NJ · Lake Minnetonka MN · Washington DC · Stowe VT
-
-**Do not build**
-Fisher Island FL and any TX / TN / WA / NV market. No state income tax means the pitch loses ~10 percentage points of urgency. Federal-only exposure is a materially weaker angle.
+**Plan for that.** The primary list being small is a property of the instruction, not a filter error. Volume comes from market count.
 
 ---
 
@@ -269,20 +281,27 @@ When a market returns too few, undo in this sequence and check the count after e
 4. **Include Unknown Sales Dates** → `Any`
 5. **Years of Ownership** 25 → 20
 6. **Estimated Value** floor down one tier
-7. Add **Trust** to Owner Type and check whether emails come through
-8. Switch from On Market to **Off Market** (List A is always far larger)
+7. **Add the next market.** This is the right answer far more often than loosening anything. A thin market is usually a thin market, not a bad filter.
+8. Run the **Off Market backfill** (List A) for that market — it is an order of magnitude larger than List B.
 
-Do **not** loosen: Owner Type Individual, Pre-Probate Exclude, or the residential-only property types. Those protect list quality, and loosening them puts unqualified people into a compliance-sensitive sequence.
+**Never loosen these, in any order:**
+- **Owner Type = Individual.** Adding Trust or Corporate puts unreachable records on the bill (billed per contact) and breaks `{{firstName}}`.
+- **Pre-Probate = Exclude.** Stepped-up basis erases the gain; there is nothing to sell these people.
+- **Residential-only property types.**
+
+Loosening any of those puts unqualified people into a compliance-sensitive sequence. *(An earlier version of this list had step 7 as "add Trust to Owner Type," which contradicted this rule. Removed 2026-07-29.)*
 
 ---
 
 ## Naming and handoff
 
-Save each search as: `Bloom — V1 — {Market} — {Off Market | On Market}`
+Save each search as: `Bloom — V1 — {Market} — {OnMkt | Pending | OffMkt}`
 
-Export separately per campaign. Do not merge List A and List B, they run different sequences in Instantly.
+Export separately per campaign. Do not merge List A and List B, they run different sequences in Instantly. Keep **Pending** separate from the rest of List B so its reply rate can be judged on its own.
 
-**Before upload:** run the emails through verification. PropStream contact data is estimated and multi-match (often several emails per property). Bounce rate is the launch risk here, and warmed domains are already an open blocker on Mitch's side.
+**Before upload:** run the emails through verification. PropStream contact data is estimated and multi-match (often several emails per property). Bounce rate is the launch risk here.
+
+**Also confirm before upload (was asserted as a known blocker on 2026-07-21, unverified since):** whether Mitch's sending domains are warmed and ready. Check current status rather than assuming either way.
 
 ---
 

@@ -2,6 +2,12 @@
 
 **Bloom Financial / Bloom Tax & Estate Group, LLC**
 *Reconciled from the July 14 strategy call, the intake form, and Mitch's July 8 + July 15 emails. Scoped to **3 launch campaigns** (July 24, 2026).*
+*🔄 **Updated 2026-08-05 after the Aug 5 call:** Campaign 3 switched from direct business sellers to **business brokers scraped from BizBuySell**. See "AUG 5 CHANGE" below.*
+
+> ### 🔄 AUG 5 CHANGE — Campaign 3: business sellers ➜ business brokers
+> **What happened.** We told Mitch the direct business-seller play is blocked: marketplace listings are deliberately anonymized (no company name, no owner, NDA-gated), so there is no path from a listing to an inbox at scale. Mitch's answer: *"You see all the brokers on the right side? Maybe we do a campaign where we reach out to the business brokers."* Jonathan: *"That is a lot more doable."* Mitch has cold-called these brokers and reports **they all pick up the phone**.
+> **Effect:** the ~8,800-broker channel (previously Phase 2, rank 5) **is promoted into the Campaign 3 slot**, sourced from **BizBuySell's broker directory** rather than Apollo. The direct business-seller marketplace play is **parked** (its copy stays on file, `Copy/Vertical 3`).
+> **Full scrape spec:** `Leads/Mitchell Bloom - BizBuySell Broker Scrape Spec.md`.
 
 ====================================================================
 ## PART 1 — INTERNAL ICP ANALYSIS & LIST-BUILDING
@@ -13,15 +19,16 @@
 |---|---|---|---|---|
 | **1** | **Apartment / rental / commercial RE sellers** (individually owned) | PropStream | ❌ to write | 🟢 Phase 1 |
 | **2** | **Concentrated stock holders** (recently-IPO'd cos) | Apollo + LinkedIn | ✅ Vertical 2 | 🟢 Phase 1 |
-| **3** | **Business sellers** ($2M–$20M, fast-selling industries) | Marketplaces + Apollo | ✅ Vertical 3 | 🟢 Phase 1 |
+| **3** | **Business brokers** (~8,800 nationwide) 🔄 *replaced business sellers Aug 5* | **BizBuySell directory scrape** (+ IBBA, Apollo/Blitz enrich) | ❌ to write | 🟢 Phase 1 |
 | 4 | Trophy / residential home owners | PropStream | ✅ Vertical 1 (×2) | 🟡 Phase 2 |
-| 5 | Business brokers (referral channel) | Apollo | — | 🟡 Phase 2 |
+| 5 | Business sellers ($2M–$20M) 🔄 *parked Aug 5, was Campaign 3* | Marketplaces + Apollo | ✅ Vertical 3 | 🟠 Parked — sellers anonymized |
 | 6 | Luxury real-estate brokers (channel for trophy) | Apollo | — | 🟡 Phase 2 |
 | 7 | Institutional / LLC-veiled commercial RE | county / niche | — | 🔴 Deferred |
 | 8 | Farmland | TBD | — | 🔴 Unvalidated |
 | 9 | Crypto / Bitcoin holders | social-bio scrape | — | 🔴 Best-effort |
+| 10 | CPAs (second referral channel) | TBD | — | 🔴 Raised Aug 5, not scoped |
 
-> **Why this order:** Campaign 1 is ~70% of Mitch's existing trust business and his explicit July 15 instruction. Campaign 2 is the LGJ data team's "easiest + most receptive." Campaign 3 has a real selling-signal source. Trophy homes are build-ready (filters + copy done) but demoted as a priority call. Brokers are a referral channel, not a direct-seller list.
+> **Why this order:** Campaign 1 is ~70% of Mitch's existing trust business and his explicit July 15 instruction. Campaign 2 is the LGJ data team's "easiest + most receptive." Campaign 3 is now the **broker channel**, which is sourceable and responsive, where the direct-seller list is neither. Trophy homes are build-ready (filters + copy done) but demoted as a priority call.
 
 --------------------------------------------------------------------
 ### 🟢 CAMPAIGN 1 — APARTMENT / RENTAL / COMMERCIAL RE SELLERS  ⭐ lead segment
@@ -34,15 +41,16 @@
 
 **Exclude:** corporate, private-equity, institutional. Those have no reachable person/email. Expect the **commercial** list to be the smallest of the three (more of it is LLC-held).
 
-**How to find (PropStream — full recipe in `Leads/Mitchell Bloom - PropStream Filter Spec.md`):**
+**How to find (PropStream — paste-ready configs in `Leads/Mitchell Bloom - PropStream Filters Launch.md`, the doc to run):**
 - Property Type = Multi-Family 2–4 / 5+, Duplex / Triplex / Quadruplex, Mobile Home or Trailer Park (+ small commercial where available)
 - **Owner Type = Individual** ← the LLC-stripping filter that makes the reachable slice sourceable
 - Estimated Value tiered by market ($2M+ floor) · Years of Ownership 15+ · Pre-Probate **Exclude** (stepped-up basis erases the gain) · High Equity
 - High-tax-state market list (below)
 
-**⭐ Timing split (Mitch's #1 target = about-to-close sellers):**
-- **List A — Selling Signals:** MLS = On Market / For Sale (Active, Coming Soon, Contingent). *Prioritize.*
-- **List B — No Signals:** MLS = Off Market. Volume + nurture.
+**⭐ Timing (per Mitch, comment on the copy doc, July 29): prioritize just listed or pending.**
+- **Primary list:** properties just listed or under contract — MLS On Market, Listing Type For Sale, Status **Active · Active Under Contract · Coming Soon · Contingent**. The highest-intent sellers, and what Mitch asked us to lead with.
+- **Pending:** included per Mitch, run as its **own separate list** so its performance is visible. Caveat to watch: pending typically closes in ~30 days and the structure must be set up before close, so a share will already be too late.
+- **Secondary list:** owners who fit the profile but have not listed yet (Off Market), kept for volume because the listed or pending pool is small in any one market. SF apartments: 509 off-market vs **6** on-market.
 
 **Copy (to write):** own sequence — lead with **depreciation recapture** + **failed-1031** (Kelly & David is an exact match) and the *"toilets, trash, tenants, maintenance"* pain. Do **not** reuse the trophy-home "your home" copy on a landlord.
 
@@ -60,39 +68,57 @@
 - **Email status:** Verified
 
 --------------------------------------------------------------------
-### 🟢 CAMPAIGN 3 — BUSINESS SELLERS ($2M–$20M)  ⭐ signal-based
-*Source: business-for-sale marketplaces (signal) + Apollo (master bucket). Copy: `Copy/Vertical 3. Business Sellers ($2M-$20M).md` (written).*
+### 🟢 CAMPAIGN 3 — BUSINESS BROKERS (~8,800 nationwide)  🔄 *new as of Aug 5*
+*Source: **BizBuySell broker directory scrape** + IBBA, enriched via Apollo/Blitz. Copy: **not written**. Full spec: `Leads/Mitchell Bloom - BizBuySell Broker Scrape Spec.md`.*
 
-**Who:** owners getting ready to sell; ideal within a couple months, asset in contract / pending. Deal size sweet spot **$2–10M**, agreed target **$2–20M**, single decision-maker. Fast-selling industries named: **medical clinics, medical aesthetics, healthcare practices, construction, laboratories**, veterinary, manufacturing, logistics, aerospace/defense, HVAC/plumbing/electrical, industrial waste. *(Cannabis: Mitch would like it but flagged "big egos"; not formally excluded.)*
+**Why it replaced business sellers.** The direct-seller marketplace play died on the Aug 5 call: listings are deliberately anonymized ("10-person plumbing business in Wisconsin"), no company name, no owner, usually NDA-gated. Mitch redirected us to the brokers listed alongside those listings. He has cold-called them himself: *"They all pick up their phone."* Responsive channel, sourceable list.
 
-**How to find — two routes:**
+**Who:** business brokers, M&A advisors and business intermediaries with **live deal flow** — a broker with active BizBuySell listings is sitting on owners who are actively selling right now.
 
-**A) Signal route (people selling right now) — marketplaces → match → enrich:**
-| Site | Notes |
+**✅ VERIFIED COUNTS (2026-08-05, live site probe):** CA **926** · NY **446** · NJ **262** · CO **248** · MA **197** · MN 83 · WI 79 · DC 48 · HI 28 · VT 18 = **2,335 raw** across the 10 target markets. Mitch's "~8,800 in the country" was never checked and isn't our number. ⚠️ 2,335 is **before dedupe**: the directory returns brokers *"serving this area,"* not headquartered there, so brokers repeat across states and some sit outside the map entirely (confirmed a Phoenix broker on the California page). Unique in-market brokers will be meaningfully lower, and the sendable count lower again after email enrichment.
+
+**How to find (BizBuySell directory, geo-seeded):**
+| Level | URL pattern |
 |---|---|
-| **BizBuySell** | Biggest, ~45,000+ active listings (CoStar). Has a for-sale-by-owner filter. |
-| **BusinessesForSale.com** | ~51,000 US listings, brokers + independent sellers |
-| **BizQuest** | CoStar sister to BizBuySell; inventory overlaps — **dedupe** |
-| **LoopNet** | ~1,500 businesses (CoStar); skews commercial-property-attached |
-| **BusinessMart** (FSBO) | By-owner section, cheap fees (~$70) → purest direct-owner pool |
-| **BizForSale.co** (FSBO) | Newer, owner-direct positioning |
-| Flippa / Acquire.com / Empire Flippers / Quiet Light / FE Intl / Website Closers | Digital — mostly under $2M floor + young founders (off-avatar); larger ones brokered |
+| State (main seed) | `bizbuysell.com/business-brokers/california/` |
+| County | `bizbuysell.com/business-brokers/california/santa-clara-county/` |
+| City | `bizbuysell.com/business-brokers/california/los-angeles/` |
+| Broker profile | `bizbuysell.com/business-broker/{firm-slug}/{firm-slug}/{brokerId}/` |
 
-**Pipeline:** scrape public listing pages → filter to **$2M+ in target states** → AI-match each anonymized listing to a real company (Clay does this well; industry + city + revenue + headcount + "established 1987" is usually enough to pin it) → enrich the owner via **Apollo / Blitz** → sequence direct. Match rates won't be 100%, but it's the only route from these sites to an owner's inbox.
-> ⚠️ **ToS / anti-bot:** BizBuySell + CoStar sites restrict automated access and are actively anti-bot — review before committing tooling. Apify has off-the-shelf BizBuySell actors (`apify-scraping` skill).
+**Filters:**
+- **Geography:** the fixed high-tax map — CA · NY · NJ · MA · MN · HI · WI · VT · DC + CO. No expansion.
+- **`active_listing_count ≥ 1`** — live deal flow, and it is what makes the email personalizable
+- **Tier 1:** ≥1 active listing at **asking price ≥ $2M** (matches the deal-size floor / ~$1M cap-gains exposure). **Tier 2:** active listings all under $2M, kept at lower priority with a generic angle.
+- **Exclude** franchise-resale-only brokers (no seller cap-gains event at target size) and dead profiles (0 active, 0 sold)
+- **Cap 3 brokers per firm** — big brokerages list a dozen agents at one office; blasting all of them burns the domain
+- Certifications (CBI / M&AMI) are a quality sort, not a gate
 
-**B) Master bucket (pipeline, at scale) — Apollo:**
-- Seniority Owner / Founder / Partner / CEO · Titles Owner, Founder, President, CEO, Managing Member, Principal, Sole Proprietor
-- Company Headcount **1–50** (extend to 200 only for mfg/aerospace) · Company Revenue **$2M–$20M**
-- Industry/keyword lists per vertical (dental, veterinary, med-spa, HVAC/plumbing/electrical, construction, manufacturing, logistics, aerospace/defense, waste)
-- Company Location = high-tax states · Founded Year before ~2005 (optional exit proxy)
+**Fields to scrape:** broker name, firm, title, phone, firm website, profile URL, city/state/ZIP, service areas, industries served, certifications, license #, active + sold listing counts, bio, LinkedIn. **Plus a child table of their active listings** — headline, industry, city/state, asking price, cash flow, revenue, EBITDA, status, date listed. The listing rows are the personalization payload: Jonathan's line on the call was *"Dara, I saw your listing on BizBuySell for 1.4, about the two retail locations."* No listing join, no first line.
+
+**⚠️ Email is not on BizBuySell — verified.** Checked a live profile: zero `mailto:` links, zero email strings on the page. Mitch's *"they all have their email address, you can look them all up"* is true of the broker's firm site, not of BizBuySell. What we **do** get is name, firm, **phone** (`tel:` sits in the DOM even behind the "Show Phone Number" button) and the **firm's website** — and the website is the key that makes enrichment work. Pipeline: profile → firm domain → Apollo/Blitz by name + domain → MillionVerifier. The **IBBA directory** (~2,800 certified brokers) runs as Leg B because it does expose a public email field.
+
+**Mechanics (verified):** pagination is `/business-brokers/{state}/{page}/`, **30 brokers per page**, ~80 pages for all 10 states. The page is Angular **server-side rendered**, so broker data ships in the HTML — there is no JSON API to hit, parse the DOM.
+
+**⚠️ Tooling:** the **403 is server-side fetch only** — real Chrome loads the directory with no captcha and no challenge, so this is a `browser-harness` job, not a paid-actor job. Probe on local Chrome; run the **bulk pull on Browser Use Cloud** (`start_remote_daemon`) for proxies + stealth, which is what keeps it off Shara's browser and IP. Stay signed out, throttle. Apify is fallback only. Still worth running the IBBA actor as Leg B at ~$2.90 since it is a different source that carries emails. Review CoStar ToS before anything recurring.
+
+**Copy direction (to write):** channel/referral message, not a seller message. Mitch's requested angle verbatim: ***"Plan first, sell second."*** Offer the broker four things: their client keeps more so the deal actually closes, the **Value Builder** program to raise business value pre-sale, the broker's own income-tax exposure as a top producer, and Mitch as an outside partner in their network. Pre-empt the two objections Mitch named: *"that's up to the tax person"* and *"I don't want to kill my deal"* (frame as deal-saver — sellers blindsided by a 30-45% hit walk away from closings).
+
+--------------------------------------------------------------------
+### 🟠 PARKED — BUSINESS SELLERS ($2M–$20M)  *was Campaign 3 until Aug 5*
+*Copy already written and kept on file: `Copy/Vertical 3. Business Sellers ($2M-$20M).md`.*
+
+**Why parked:** marketplace listings hide the seller. There is no reliable path from an anonymized listing to an owner's inbox at scale, which is exactly what triggered the Aug 5 pivot to brokers. Not deleted — if the broker channel produces sellers, or if a match-and-enrich route proves out, this comes back.
+
+**The pipeline as designed** (unchanged, for the record): scrape public listing pages across BizBuySell / BusinessesForSale.com / BizQuest / LoopNet / BusinessMart / BizForSale.co → filter to **$2M+ in target states** → AI-match each anonymized listing to a real company (Clay; industry + city + revenue + headcount + "established 1987" usually pins it) → enrich the owner via Apollo/Blitz → sequence direct. Match rates were never going to be 100%.
+
+**Broad master bucket via Apollo** (the volume fallback, never run): Seniority Owner/Founder/Partner/CEO · Headcount 1–50 (200 for mfg/aerospace) · Revenue $2M–$20M · industry/keyword lists per vertical · high-tax states · Founded before ~2005.
 
 --------------------------------------------------------------------
 ### 🟡 PHASE 2 — launch when promoted
 
 **4. TROPHY / RESIDENTIAL HOME OWNERS** — PropStream. Individual owners of high-value, long-held homes (bought decades ago, huge appreciation; NOT new builds). **Most build-ready segment:** filters done (1,508 in Beverly Hills) + both sequences written (`Copy/Vertical 1…`). Same PropStream method + On/Off-Market timing split as Campaign 1. Demoted as a priority call; launches fast when promoted.
 
-**5. BUSINESS BROKERS** (~8,800 nationwide) — Apollo. **Referral channel**, not a direct-seller list (broker brings the seller). Different message than Campaign 3. On the call Mitch said brokers usually won't engage and to go direct — so this ships after the direct-seller campaigns.
+**5. ~~BUSINESS BROKERS~~ — 🔄 promoted to Campaign 3 on Aug 5.** See the Campaign 3 section above. (Note the reversal: on the July 14 call Mitch said brokers usually won't engage and to go direct to owners; on Aug 5 he reversed that himself once the direct-seller list proved unsourceable, and reported brokers all answer their phones.)
 
 **6. LUXURY REAL-ESTATE BROKERS** (top ~1,000 brokerages, ~$2.25T volume) — Apollo. Channel for trophy sellers; follows Campaign 4's phase. Sotheby's / Christie's / Compass / Douglas Elliman / Coldwell Banker Global Luxury, in the luxury micro-markets.
 
@@ -107,7 +133,7 @@
 
 --------------------------------------------------------------------
 ### WHAT WE'RE AVOIDING (from the call)
-- **Brokers / realtors as the target** — go direct to owners (brokers fear busting the deal; realtors push 1031s). *(Brokers kept only as a Phase-2 referral channel.)*
+- ~~**Brokers / realtors as the target**~~ — 🔄 **reversed Aug 5 for business brokers only.** The July 14 position was go-direct-to-owners because brokers fear busting the deal. That still holds for *real-estate* brokers/realtors (they push 1031s), but business brokers are now Campaign 3 because the direct business-seller list can't be built. Their two objections are now copy problems to solve, not reasons to skip the segment.
 - Corporate / private-equity / institutional-owned property
 - New-build trophy homes (no appreciation yet)
 - Deals under **$2M**
@@ -118,8 +144,8 @@
 ### DATA SOURCE PER CAMPAIGN
 - **Campaign 1 — Apartment/rental/commercial sellers:** PropStream (Owner Type = Individual) + county records for edge cases
 - **Campaign 2 — Stock holders:** Apollo + LinkedIn (list of recently-IPO'd companies)
-- **Campaign 3 — Business sellers:** marketplaces (BizBuySell etc.) → Clay match → Apollo/Blitz enrich; plus Apollo master bucket
-- Phase 2 trophy / brokers: PropStream + Apollo · Crypto: social-bio scrape · Farmland: TBD
+- **Campaign 3 — Business brokers:** BizBuySell broker directory scrape (Apify, residential proxies) + IBBA directory → dedupe → Apollo/Blitz email enrich → MillionVerifier
+- Phase 2 trophy / luxury RE brokers: PropStream + Apollo · Crypto: social-bio scrape · Farmland: TBD · Parked business sellers: marketplaces → Clay match → Apollo/Blitz
 
 --------------------------------------------------------------------
 ### TARGET GEOGRAPHY (high state-income-tax)
@@ -138,7 +164,9 @@
 --------------------------------------------------------------------
 ### OPEN QUESTIONS TO RESOLVE
 1. **⚠️ Guarantee & B2C tension (raise with Jay).** Mitch's July 8 email: his agreement reportedly requires leads Apollo-available, companies <50 employees, **not filtered by city/zip**. His real targeting is geo-specific, individual-owner (arguably B2C), value-filtered, and his top target (in-contract sellers) isn't an Apollo motion. Close expectations directly — he was explicit he doesn't want "unfulfilled expectations."
-2. **Campaign 1 copy** — the apartment/rental/commercial sequence isn't written yet; it's the one build blocker for Phase 1.
+2. **Campaign 1 copy** is written (`Copy/Vertical 4`), reviewed by Mitch, and revised per his notes (1031 distinction added; listed/pending prioritized). **The open build blocker is now the Campaign 3 broker sequence — it does not exist yet.**
+2b. **Broker email fill rate is unknown** until the BizBuySell + IBBA legs run. BizBuySell exposes no email, so the list depends entirely on the Apollo/Blitz enrich step. Don't quote Mitch a broker count before we see a verified rate.
+2c. **CoStar ToS** on recurring BizBuySell scraping — review before scheduling a repeat run.
 3. Can we find commercial / MHP owners in bulk via PropStream Individual filter, or fall back to the "needle in a haystack" test? (Campaign 1 tests this.)
 4. How to frame proof without hinting a lead might be audited → resolved: audits are banned from copy.
 5. Deal-size floor: intake USP **$1M** cap-gains min vs. call **$2M** RE floor — pick one for the revenue/value proxy.
@@ -157,7 +185,7 @@ We reach people who are about to sell a highly appreciated asset and want to avo
 ### THE FIRST THREE CAMPAIGNS
 > **Campaign 1:** Sellers of apartment buildings, mobile-home parks, rentals and commercial property
 > **Campaign 2:** Holders of highly appreciated company stock
-> **Campaign 3:** Business owners preparing to sell
+> **Campaign 3:** Business brokers who are actively selling businesses right now
 > *Next up (already prepared):* owners of trophy / luxury homes, plus holders of large crypto / Bitcoin gains.
 
 ### CAMPAIGN 1 — SELLERS OF APARTMENTS, MOBILE-HOME PARKS, RENTALS & COMMERCIAL PROPERTY
@@ -169,9 +197,11 @@ We reach people who are about to sell a highly appreciated asset and want to avo
 - **Who they are:** Long-time employees at companies that went public in the last 5–10 years (for example SpaceX or NVIDIA) holding stock with large built-in gains.
 - **Why they fit:** Our easiest group to find and the most receptive to your help.
 
-### CAMPAIGN 3 — BUSINESS OWNERS PREPARING TO SELL
-- **Who they are:** Owners of businesses in the $2M–$20M range with a single decision-maker, in fast-selling industries such as healthcare practices, medical clinics and aesthetics, construction, and laboratories.
-- **Why they fit:** We target both those actively listed for sale and a broader pool likely to exit soon.
+### CAMPAIGN 3 — BUSINESS BROKERS
+- **Who they are:** Business brokers and M&A advisors who currently have businesses listed for sale, pulled from the BizBuySell broker directory in your target states.
+- **Why they fit:** This is the change we agreed on the August 5 call. The business listings themselves are anonymous by design, so there is no reliable way to reach the owner behind them. The brokers are public, they have live deal flow, and you have found they answer. Each broker is sitting on multiple owners who are selling right now.
+- **The angle:** plan first, sell second. We help their client keep more so the deal closes instead of stalling on the tax bill, we bring in Value Builder to raise the value before the sale, and we position you as the capital gains partner in their network.
+- **Note:** Owners of businesses listed for sale are still on file as a group we can revisit if a workable way to reach them opens up.
 
 ### NEXT UP (ALREADY PREPARED)
 - **Trophy / luxury homes** — long-held high-value homes in top markets (Beverly Hills, Montecito, Vail and similar). Filters and copy are already built, so this launches quickly once the first three are running.
@@ -181,7 +211,7 @@ We reach people who are about to sell a highly appreciated asset and want to avo
 High state-income-tax states, where your offer matters most: **New York · California · Colorado · Minnesota · Wisconsin · Hawaii** (and other high-tax states).
 
 ### HOW WE FIND THEM
-We pull each group from the best-fit data source — property records for the real-estate groups, a professional database for employees and business owners, plus live "for-sale" signals for businesses — then refine from there. The property-based groups take a little longer to build than the database-based ones.
+We pull each group from the best fit data source: property records for the real estate groups, a professional database for the employees holding stock, and the BizBuySell broker directory for the brokers, then refine from there. The property based groups take a little longer to build than the database based ones.
 
 ### HOW WE'LL SPEAK TO THEM
 We lead with trust: offering to share exactly how the strategy works so prospects can review it with their own CPA. Every email carries the proper disclaimer, with no promissory claims.

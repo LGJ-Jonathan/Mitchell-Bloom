@@ -1,26 +1,28 @@
-# Vertical 2 — Concentrated-Stock Holders
+# Vertical 3 — Business Sellers ($2M–$20M)
 
-**Campaign type:** Master bucket — employees / former employees of companies that IPO'd in the last 5 to 10 years, holding large low-basis positions. No public "selling signal" exists in bulk for this ICP, so this is one master sequence (targeting signal = long tenure at a post-IPO employer = likely vested, likely holding).
+**Campaign type:** Owners selling a business (deal size $2M–$20M, sweet spot $2M–$10M; single decision-maker). Signal-based via business-for-sale marketplaces + Crunchbase, plus the fast-selling-industries volume bucket.
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge field:** `{{firstName}}` only
 **Cadence:** E1 (day 0) → E2 (day 3, reply) → E3 (day 7) · **A/B:** 3/2/2
 
-**Angle (source of truth = July 14 strategy call + 2nd analysis + Playbook Insights):** holders delay selling *because* of the tax bill and the fear of being stuck in one position. The strongest, most compliant lever for this ICP is **liquidity + diversification** (Mitch's DST Playbook @28:47): defer the gain *and* spread the proceeds across other investments instead of staying stuck in one stock. Open with a question that self-qualifies the holder, then build trust in who Bloom is (specialization / media credibility / CPA-reviewed). No 1031 angle here (real-estate only). Reply-based CTA, no booking link in E1.
+**Angle (source of truth = 2nd analysis Campaign 3 + transcript):** owners near a sale their CPA has not solved for. Open with a question that self-qualifies the seller, then build trust in who Bloom is (specialization / media credibility / a real CPA-reviewed result) rather than pointing out the cold nature. Offer the mechanism openly so they can vet it with their CPA. Reply-based CTA, no booking link in E1.
 
-**Trust builders (all verified):** (1) specialization — the one thing he does (intake USP); (2) media — featured in WSJ, MarketWatch, Business Insider, US News (2nd analysis Source Ledger, verified per intake); (3) transparency — sends the mechanism in writing, not a secret; (4) their own CPA reviews everything (@26:07). *Media-mention line needs Mitch's ad-review sign-off before send.*
+**Trust builders (all verified in intake/transcript):** (1) specialization — the one thing he does; (2) media — featured in WSJ, MarketWatch, Business Insider, US News (intake); (3) real client result — Kelly & David $7.6M / $1.1M; (4) transparency — sends the mechanism in writing, not a secret; (5) their own CPA reviews everything. *Media-mention line needs Mitch's ad-review sign-off before send.*
 
-**Plain English + jargon-free:** no "1031"/"Section 453"/"installment sale," no "IRS" (→ "taxes"). "Defer" kept as the accurate, non-promissory anchor. **No real-estate client figure in a stock email** — proof is the verified media credibility, not the Kelly & David property case.
+**Plain English + jargon-free:** no "1031"/"Section 453"/"installment sale," no "IRS" (→ "taxes"), "a third of the profit" not "the gain." "Defer" kept as the accurate, non-promissory anchor.
 
-**Banned (per call):** Rob Lowe, audit statistics, indemnification, pricing, "secret method," the "70% fail" stat (unverified). **"Defer," never "avoid."**
+**Written to align with Mitch's disclaimer (Circular 230 posture):** general/educational, hedged, non-promissory, no guaranteed tax outcome; the reader's own CPA stays in the decision. `[DISCLAIMER PLACEHOLDER]` = Mitch's own disclaimer verbiage (he has it).
 
-**CAN-SPAM:** footer carries the physical address (rule 4), a clear opt-out (rule 5), and an ad-identification line (rule 3). Honest subjects, incl. E3 (rule 2). Rules 6–7 operational at deploy.
-**Open items:** confirm postal address (intake address placeholder) · Mitch's disclaimer verbiage · ad-review sign-off on the WSJ/Business Insider line.
+**Banned (per call):** Rob Lowe, audit statistics, indemnification, pricing, "secret method," the "70% of owners fail" stat (unverified per source ledger). **"Defer," never "avoid."**
+
+**CAN-SPAM:** footer carries the physical address (rule 4), a clear opt-out (rule 5), and an ad-identification line (rule 3). Honest subjects, incl. E3 (rule 2). Rules 6–7 (honor opt-outs ≤10 business days across all campaigns; shared LGJ/Bloom liability) are operational at deploy.
+**Open items:** confirm postal address (intake address placed as placeholder) · Mitch's disclaimer verbiage · Mitch's ad-review sign-off on the WSJ/Business Insider line.
 
 ---
 
 ## Subject lines (rotate across E1)
-1. `{{firstName}}, still holding?`
-2. `a thought on your shares`
-3. `the reason a lot of people hold`
+1. `how much do you keep after taxes?`
+2. `selling your business?`
+3. `before you sign`
 
 ## E3 subject lines (new thread)
 1. `one more thing`
@@ -30,17 +32,19 @@
 
 ## E1 — day 0 (new thread)
 
-### E1-A — the reason you're holding
+### E1-A — question + specialization + transparency
 ```
 {{RANDOM | Hi | Hey | Hello}} {{firstName}},
 
-Are you holding a big position in your company stock mostly because of the
-tax you would owe if you sold?
+When you sell your business, do you know how much of your profit you
+actually keep after taxes?
 
-You are not alone. Selling a concentrated position can mean handing close
-to a third of the profit to taxes. A part of the tax code lets some people
-defer that and spread the proceeds across other investments, instead of
-leaving it all in one stock.
+Helping owners defer that at closing is the one thing I do. In a high tax
+state it can be close to a third, gone the day it closes.
+
+You would not have to take my word for it. I would send you exactly how it
+works so you and your CPA can look it over first. It just has to be set up
+before you sign.
 
 {{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at?}}
 
@@ -56,16 +60,16 @@ Reply "unsubscribe" and I'll take you off my list.
 [DISCLAIMER PLACEHOLDER]
 ```
 
-### E1-B — open question
+### E1-B — question + media credibility
 ```
 {{RANDOM | Hi | Hey | Hello}} {{firstName}},
 
-If you sold a chunk of your position tomorrow, do you know how much you
-would owe in taxes, and whether you would have to pay all of it this year?
+If you are selling your business, has anyone shown you how some owners
+defer the tax at closing instead of paying a third of the profit that day?
 
-Most people assume the answer is yes. A part of the tax code lets some
-sellers defer it and move the proceeds into other investments over time,
-instead of staying stuck in one stock.
+This is the strategy I specialize in, and I have been featured on it in
+the Wall Street Journal and Business Insider. It has to be set up before
+you sign, and your CPA can review the whole thing first.
 
 {{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at?}}
 
@@ -81,17 +85,16 @@ Reply "unsubscribe" and I'll take you off my list.
 [DISCLAIMER PLACEHOLDER]
 ```
 
-### E1-C — media credibility
+### E1-C — question + real client, CPA-reviewed
 ```
 {{RANDOM | Hi | Hey | Hello}} {{firstName}},
 
-Has anyone shown you how some people defer the tax when they finally sell
-a big stock position, instead of paying a third of it all at once?
+When a client of mine sold for $7.6 million, how did they keep about $1.1
+million working instead of handing it over in taxes that year?
 
-This is the strategy I focus on, and I have been featured on it in the
-Wall Street Journal and Business Insider. It lets you defer the gain and
-diversify out of the position over time, and your CPA can review the whole
-thing first.
+They used one part of the tax code to put off that bill, with their own
+CPA reviewing every step. The same thing can work when you sell a
+business, as long as it is set up before you sign.
 
 {{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at?}}
 
@@ -107,19 +110,21 @@ Reply "unsubscribe" and I'll take you off my list.
 [DISCLAIMER PLACEHOLDER]
 ```
 
-### E1-D — Client Suggested Variant (pending ad-review) · subject: `before you sell your shares`
+### E1-D — Client Suggested Variant (pending ad-review) · subject: `planning to sell your business?`
 ```
 Hi {{firstName}},
 
-Sitting on stock that's grown well beyond what you paid?
+Planning to sell your business in the next few years?
 
-You've probably been told the capital gains tax is just the price of
-cashing out. That's the old way: sell your shares first, and your CPA
-tells you what you owe after.
+Most owners sell first, then find out what they owe in capital gains tax.
+It's backwards, and it costs them.
 
-There's a newer way. Plan before you sell, and you can legally defer a big
-part of that tax and keep it working for you and your family instead of
-losing it to taxes.
+Plan a couple years ahead and two things happen: you build the value up
+before you sell, and you structure it to defer a big part of the tax
+instead of paying it all at close.
+
+Done right, that can be seven figures that stays in your family instead of
+going to the government.
 
 {{RANDOM | Happy to walk you and your CPA through it. Want me to? | Happy to send you how it works, for you and your CPA to look over. | Happy to show you how. Worth a look? | Can I send it over, so you can hand it to your CPA?}}
 
@@ -132,7 +137,7 @@ Reply "unsubscribe" and I'll take you off my list.
 [DISCLAIMER PLACEHOLDER]
 ```
 
-*Client-suggested. Flags for ad-review: "legally defer" and "keep it working for you and your family" lean promissory; sign-off is "Mitchell" (informal). Kept verbatim per client.*
+*Client-suggested. Flags for ad-review: "seven figures that stays in your family" is promissory; "the government" vs "taxes"; sign-off is "Mitchell." Kept verbatim per client.*
 
 ---
 
@@ -239,4 +244,4 @@ Reply "unsubscribe" and I'll take you off my list.
 
 ---
 
-*Copy grounded in the July 14 strategy call, the 2nd analysis (incl. its Source Ledger), the Playbook Insights, and the intake. Plain English, no "IRS," no real-estate client figure. Trust built through specialization, verified media credibility, and CPA review. Written to align with Mitch's disclaimer (general/hedged/non-promissory). CAN-SPAM: address + opt-out + ad-identification on every email. Nothing fabricated; postal address, disclaimer verbiage, and ad-review sign-off on the media line pending Mitch.*
+*Copy grounded in the July 14 strategy call, the 2nd analysis, and the intake. Plain English, jargon-free, no "IRS." Trust built through specialization, media credibility, a real CPA-reviewed result, and transparency. Written to align with Mitch's disclaimer (general/hedged/non-promissory). CAN-SPAM: address + opt-out + ad-identification on every email. Nothing fabricated; postal address, disclaimer verbiage, and ad-review sign-off on the media line pending Mitch.*

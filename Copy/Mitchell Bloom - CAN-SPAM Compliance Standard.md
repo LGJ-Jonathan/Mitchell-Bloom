@@ -43,12 +43,26 @@ The goal of every email is **one thing: get a reply from an interested prospect.
 Mitchell Bloom
 Bloom Financial
 
-[DISCLAIMER: Mitch's RIA compliance verbiage — required before launch]
 Bloom Financial, [valid physical postal address]
 Reply "unsubscribe" and I'll take you off my list.
+
+[DISCLAIMER PLACEHOLDER]
 ```
 
 This keeps the top of the email clean and persuasive while the footer satisfies rules 3, 4, and 5. A reply-based "unsubscribe" is an accepted opt-out mechanism under the Act (a return email address qualifies), and it keeps the required word recipients look for while staying low-friction.
+
+> **Do NOT paste the IRS Circular 230 disclosure into the emails.** It is a *writing principle*, not footer text — see the section below. Pasting a long tax disclaimer into a cold email hurts deliverability and reads as heavy/legalistic. Apply its posture in the copy instead. (If Mitch's RIA ad-review later requires a short literal disclaimer line, add whatever they specify — but that is their call, not a default.)
+
+### Copy must ALIGN with the Circular 230 posture (write the body to match the disclaimer)
+The disclaimer says the message's tax content is **general information**, is **not individualized advice**, and **cannot be relied on to avoid penalties** or as a recommendation of a specific transaction. If the body promises a tax outcome, the email contradicts its own footer — which is exactly the exposure we are trying to avoid. So every body must be written to match it:
+- **Educational and general, never individualized advice.** Frame it as what *"some owners" / "some sellers"* do, not what *"you will"* get.
+- **Hedge every outcome:** "may," "can," "could," "generally," "in many cases." Never guarantee a tax result or penalty avoidance.
+- **Cue variability** wherever a result appears (e.g., "every situation is different").
+- **Keep the reader's own CPA/attorney in the decision** ("run it past your CPA").
+- **No definitive dollar promises to the reader.** A real past-client result may be stated as history, never as a promise of what they will get.
+- **Use "defer,"** not "avoid/eliminate"; say "so more of the proceeds can keep working," not "you will keep X."
+
+This posture satisfies the Circular 230 disclosure and the RIA non-promissory rule at the same time, and it applies to every vertical, not just trophy homes.
 
 ---
 
@@ -72,15 +86,25 @@ These are additional constraints locked on the July 14 strategy call and in the 
 - [ ] Mitch's RIA disclaimer verbiage present on every email (RIA overlay)
 - [ ] No promissory/guarantee language; "defer," not "avoid/eliminate" (RIA overlay)
 - [ ] No Rob Lowe, no audit stats, no indemnification, no pricing (RIA overlay)
+- [ ] Plain English, 6th-grade level; NO jargon or named tax-code sections in email bodies ("1031" → "roll into another property"; "Section 453"/"installment sale" → "you draw from it over time"). Save specific citations for the mechanism overview the prospect reviews with their CPA.
 - [ ] Body under 100 words; goal is a reply, not a close
 - [ ] Mitch's ad-review sign-off obtained before first send
 
 ---
 
-## Open items blocking full compliance
-1. **Disclaimer verbiage** from Mitch (currently a placeholder in all drafts).
-2. **Valid physical postal address** for the footer (not yet in drafts).
-3. **Opt-out line** added to every step (not yet in the trophy-homes draft).
-4. **Mitch's ad-review sign-off** on final copy before launch.
+## What Mitch actually asked for (grounded in the meetings)
+These are Mitch's own stated compliance requirements — the source of truth for the placeholder and the RIA overlay:
+- **His disclaimer** (July 14 call @51:39, his words): *"a disclosure that disclaims, hey, this is not specific tax or investment advice, you're going to need to run this by your CPA, by your attorney... everybody's situation is going to be different. We already have disclaimer verbiage that we can add to every email."* → **`[DISCLAIMER PLACEHOLDER]` = Mitch's own verbiage** (the "not specific tax or investment advice, consult your CPA and attorney, every situation differs" disclosure). He has it; we drop it in when he sends it. Do NOT invent it, and do NOT substitute the playbook's Circular 230 text.
+- **No promissory language** (@51:39: *"just got to make sure it's not promissory... everybody's situation is going to be different"*).
+- **Must clear his compliance / ad-review** before sending (@51:31).
+- **Email archiving** (deposit call): every sent/received email archived for a surprise regulator audit — Jay building the Supabase archive (infrastructure, tracked here as a stated requirement).
+- **CAN-SPAM compliance** confirmed as a requirement (deposit call).
 
-*Source: FTC CAN-SPAM Act Compliance Guide for Business (ftc.gov, Aug 2023, penalties edited Jan 2024). RIA overlay from the July 14, 2026 strategy call and the 2nd analysis. Nothing fabricated.*
+## Open items blocking full compliance
+1. **Mitch's disclaimer verbiage** — he said he already has it; get the exact text and drop it into `[DISCLAIMER PLACEHOLDER]` on every email. (The Circular 230 wording is only a *writing principle*, never pasted.)
+2. **Valid physical postal address** for the footer (intake address is placed as a placeholder; confirm the correct Bloom Financial mailing address).
+3. ~~Opt-out line on every step~~ ✅ **RESOLVED** — `Reply "unsubscribe"…` on all steps.
+4. **Email archiving live** before send (Supabase) — Mitch's non-negotiable from the deposit call.
+5. **Mitch's ad-review sign-off** on final copy before first send.
+
+*Source: FTC CAN-SPAM Act Compliance Guide for Business (ftc.gov, Aug 2023, penalties edited Jan 2024). RIA overlay + disclaimer wording from Mitch's own statements on the July 6 deposit call and July 14 strategy call. Nothing fabricated.*
