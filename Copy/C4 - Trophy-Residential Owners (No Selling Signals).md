@@ -1,41 +1,39 @@
-# Vertical 1 — Trophy / Residential Owners (Selling Signals)
+# C4 - Trophy / Residential Owners (No Selling Signals)  *(Phase 2)*
 
-**Campaign type:** Signal-based — owners of highly appreciated homes who are actively selling (listed, recently listed, or contract-pending via PropStream).
+**Campaign type:** Master bucket (no signal) — owners of highly appreciated homes who are NOT known to be selling.
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge field:** `{{firstName}}` only
 **Cadence:** E1 (day 0) → E2 (day 3, reply) → E3 (day 7) · **A/B:** 3/2/2
 
-**Angle (source of truth = July 14 strategy call + 2nd analysis):** these owners are on the finish line of a sale their CPA has not solved for. Poke the bear ("your CPA told you to just pay it, did that sit right?"), open a curiosity gap (there is a third option most never hear about), and offer to send the mechanism so they can vet it with their CPA. Reply-based CTA, no booking link in E1.
+**Angle (source of truth = July 14 strategy call):** owners delay selling *because* of the capital-gains hit ("people actually delay selling... they don't want to pay that capital gains"). Lead with curiosity about the option their CPA never mentioned; never assume they are selling now.
 
-**Plain English + jargon-free (Mitch's requirement):** no "1031" (→ "roll the money into another property"), no named tax-code sections, no "installment sale" (→ "you draw from it over time"). "Capital gains" stays — the one term this audience knows.
+**Written to align with the disclaimer (Circular 230 posture):** copy is general and educational, never individualized tax advice; outcomes are hedged ("some owners," "may," "can," "generally"); no guaranteed tax result; the reader's own CPA stays in the decision. Owner is the recipient; the CPA is the trust device inside the CTA. The Circular 230 posture is applied in the writing (general/hedged/non-promissory), NOT pasted into the emails. Footers carry only address + `unsubscribe` per `Mitchell Bloom - CAN-SPAM Compliance Standard.md`.
 
-**Written to align with the disclaimer (Circular 230 posture):** general/educational, hedged, non-promissory, no guaranteed tax outcome; the reader's own CPA stays in the decision. The Circular 230 text is NOT pasted in — copy is *written* to match it. Owner is the recipient; the CPA is the trust device inside the CTA. `[DISCLAIMER PLACEHOLDER]` = Mitch's own disclaimer verbiage (he has it).
-
-**Banned (per call):** Rob Lowe, audit statistics, indemnification, pricing, "secret method." **"Defer," never "avoid."**
-**Open items:** confirm postal address (intake address placed as placeholder) · Mitch's disclaimer verbiage.
+**"Defer," never "avoid."** **Open items:** confirm postal address (intake address placed as placeholder).
 
 ---
 
 ## Subject lines (rotate across E1)
-1. `did your CPA mention this?`
-2. `{{firstName}}, before you close`
-3. `an option most sellers miss`
+1. `{{firstName}}, a thought on your home`
+2. `the reason a lot of owners don't sell`
+3. `{{firstName}}, worth knowing before you sell`
 
 ---
 
 ## E1 — day 0 (new thread)
 
-### E1-A — CPA poke-the-bear
+### E1-A — the reason you're holding
 ```
 {{RANDOM | Hi | Hey | Hello}} {{firstName}},
 
-When you sell, your CPA probably told you to just pay the capital gains
-and move on. Did that sit right?
+Have you put off selling a home because of the tax bill waiting at
+closing?
 
-On a home you have held this long, that is often close to a third of the
-gain, gone in one afternoon. Most sellers are never shown the option that
-defers it instead.
+For a lot of owners, selling a home that has grown this much means
+handing close to a third of the profit to taxes. A part of the tax code
+lets some owners defer that, so more of the money keeps working for them
+instead.
 
-{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at? | Can I send the overview to share with your CPA?}}
+{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send a general overview so you can run it past your CPA? | Mind if I send how it works to share with your CPA? | Can I send the details for your CPA to look over?}}
 
 {{RANDOM | Best | Talk soon | Warm regards}},
 
@@ -49,18 +47,18 @@ Reply "unsubscribe" and I'll take you off my list.
 [DISCLAIMER PLACEHOLDER]
 ```
 
-### E1-B — the "third option" reframe
+### E1-B — open-loop curiosity
 ```
 {{RANDOM | Hi | Hey | Hello}} {{firstName}},
 
-Quick one before your home sells. Most owners are told there is one
-option: pay the capital gains at closing. The workaround people hear
-about only applies to investment property, not a home you live in.
+If you ever sold your home, do you know how much you would owe in taxes,
+and whether you would have to pay all of it the year you sell?
 
-There is another option that defers the gain instead. It just has to be
-set up before you close.
+Most owners assume the answer is yes. A part of the tax code lets some
+owners defer it over time instead. Worth understanding before you ever
+list.
 
-{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at? | Can I send the overview to share with your CPA?}}
+{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send a general overview so you can run it past your CPA? | Mind if I send how it works to share with your CPA? | Can I send the details for your CPA to look over?}}
 
 {{RANDOM | Best | Talk soon | Warm regards}},
 
@@ -74,20 +72,19 @@ Reply "unsubscribe" and I'll take you off my list.
 [DISCLAIMER PLACEHOLDER]
 ```
 
-### E1-C — proof / story
+### E1-C — curiosity + light proof
 ```
 {{RANDOM | Hi | Hey | Hello}} {{firstName}},
 
-Before you close, one story worth two minutes.
+When you eventually sell, would you rather pay the tax all at once, or
+spread it out and keep more of it working?
 
-A client sold a property for $7.6 million. Their plan to roll into
-another property fell through inside the deadline, which normally means
-paying the capital gains at closing. Using one part of the tax code, they
-deferred $1.1 million instead and kept that money working.
+Some owners defer it at closing using a part of the tax code that
+predates most banks. One client deferred just over a million on a $7.6
+million sale. Every situation is different, but the same idea can apply to
+a home. No rush on your end.
 
-The same approach applies to a highly appreciated home.
-
-{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at? | Can I send the overview to share with your CPA?}}
+{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send a general overview so you can run it past your CPA? | Mind if I send how it works to share with your CPA? | Can I send the details for your CPA to look over?}}
 
 {{RANDOM | Best | Talk soon | Warm regards}},
 
@@ -234,4 +231,4 @@ Reply "unsubscribe" and I'll take you off my list.
 
 ---
 
-*Copy grounded in the July 14 strategy call, the 2nd analysis, and the intake. Plain English + jargon-free; written to align with Mitch's disclaimer (general/hedged/non-promissory). Nothing fabricated; postal address and disclaimer verbiage pending confirmation from Mitch.*
+*Copy grounded in the July 14 strategy call, the 2nd analysis, and the intake, and written to align with the Circular 230 disclosure (general/educational, hedged, non-promissory). Nothing fabricated; postal address pending confirmation from Mitch.*

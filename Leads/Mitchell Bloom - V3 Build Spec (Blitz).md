@@ -1,18 +1,19 @@
-# Mitchell Bloom — V2 Build Spec (Blitz)
+# Mitchell Bloom - V3 Build Spec (Blitz)
 
-**Campaign:** Vertical 2, concentrated-stock holders.
+**Campaign:** C2, concentrated-stock holders. **List files:** `V3 …` (renumbered from `V2`
+on 2026-08-10; `V2` now means the business-broker list).
 **Source:** Blitz (`~/.claude/skills/blitz-api`). **Not** Apollo — see below.
 **Status:** pull in progress. Method validated; final counts pending run completion.
 
-> Companion doc: `Mitchell Bloom - V2 Data Engineer Request.md` is the same universe
+> Companion doc: `Mitchell Bloom - V3 Data Engineer Request.md` is the same universe
 > expressed as an Apollo handoff spec, for when the data engineer runs it instead.
 
 ---
 
 ## Why Blitz and not Apollo
 
-The ICP docs list V2's source as "Apollo + LinkedIn." That was never agreed on the July 14
-call — Jonathan named PropStream for trophy homes and named **nothing** for V2; LinkedIn was
+The ICP docs list this vertical's source as "Apollo + LinkedIn." That was never agreed on the
+July 14 call. Jonathan named PropStream for trophy homes and named **nothing** here; LinkedIn was
 Mitch guessing at [21:14], not Jay confirming. It's a later inference.
 
 It also isn't viable in practice. The in-house Apollo account is **100 monthly credits,

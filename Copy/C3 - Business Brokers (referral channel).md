@@ -1,4 +1,4 @@
-# Vertical 5 — Business Brokers (referral channel)
+# C3 - Business Brokers (referral channel)  *(Campaign 3)*
 
 **Campaign type:** Business brokers, M&A advisors and business intermediaries with live deal flow on BizBuySell. **Referral / channel play, not a direct-seller list.** The broker brings the seller.
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge fields:** `{{firstName}}` required · `{{companyName}}` and `{{liveListings}}` optional (see note)
@@ -128,6 +128,81 @@ Reply "unsubscribe" and I'll take you off my list.
 
 [DISCLAIMER PLACEHOLDER]
 ```
+
+---
+
+---
+
+## 🟠 NO-TAX-STATE SEGMENT — E1-D and E2-C
+*Run these **instead of** E1-A/B/C and E2-A/B for brokers in **FL, TX, WA, TN, NV, NH, WY, SD, AK**.*
+
+**Why this exists.** The IBBA national pull added **1,299 emails in no-income-tax states** (Florida alone is 959). Every other E1 variant opens on a line like *"in a high tax state it can be close to half the gain."* To a Florida broker that is simply false, and it is the first thing they read. Sending state-tax copy into a no-tax state reads as a mail-merge that did not check where they are.
+
+**The angle that still works:** **federal capital gains is 20% plus the 3.8% NIIT = 23.8%, everywhere.** On a $3M gain that is roughly $714,000 regardless of state. Depreciation recapture on any real estate in the deal is a further 25%. Smaller than California, still enough to blow up a closing.
+
+> Segment on the `state` column. Never let a `{{liveListings}}` or high-tax line reach this segment.
+
+### E1-D — federal-only, no state-tax claim
+```
+{{RANDOM | Hi | Hey | Hello}} {{firstName}},
+
+How many of your deals stall once the seller works out what they actually
+keep at closing?
+
+No state income tax where you are, but federal capital gains still runs
+about 23.8% once you include the investment income surtax, and any real
+estate in the deal gets hit again on depreciation recapture. On a few
+million in gain that is real money, and most owners have not run the
+number until they are already at the table.
+
+Helping owners defer that legally, before the sale closes, is the one
+thing I do. It gets set up ahead of closing, so it tends to take the
+objection off the table instead of creating one.
+
+{{RANDOM | Would it be okay if I sent over how it works, so you can look it over? | Mind if I send the mechanism so you can judge it yourself? | Want me to send how it works so you can see if it fits your sellers?}}
+
+{{RANDOM | Best | Talk soon | Warm regards}},
+
+Mitchell Bloom
+Bloom Financial
+
+Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
+This is an advertisement.
+Reply "unsubscribe" and I'll take you off my list.
+
+[DISCLAIMER PLACEHOLDER]
+```
+
+### E2-C — reply on thread, federal-only version of the CPA objection
+```
+{{RANDOM | Hi | Hey}} {{firstName}},
+
+The usual answer here is that taxes are the seller's CPA's problem, not
+the broker's.
+
+Fair. The catch is timing. Once the sale closes almost nothing can be
+done, and most CPAs are generalists who do not set these structures up.
+So the seller finds out too late, and it is your closing that absorbs it.
+
+I am not asking you to advise anyone on tax. I am offering to be the
+person you hand that question to when it comes up, so it stops being
+something that stalls your deals.
+
+{{RANDOM | Worth a short conversation? | Open to a quick call on it? | Want me to send how it works first?}}
+
+{{RANDOM | Best | Talk soon | Warm regards}},
+
+Mitchell Bloom
+Bloom Financial
+
+Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
+This is an advertisement.
+Reply "unsubscribe" and I'll take you off my list.
+
+[DISCLAIMER PLACEHOLDER]
+```
+
+**E3-A (Value Builder) and E3-B (the broker's own tax) work unchanged in this segment** — neither mentions state tax.
 
 ---
 

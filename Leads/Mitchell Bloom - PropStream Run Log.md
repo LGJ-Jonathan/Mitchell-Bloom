@@ -9,7 +9,7 @@
 ## Decisions locked 2026-07-31
 
 - **MLS block stays neutral.** On/Off Market = `All`, Listing Type = `Any`, MLS Status = nothing selected. One search returns both market states. This removes the Listing Type reset bug and the Off-Market-plus-Status zero trap, and folds Pending in automatically.
-- **No copy split.** The Vertical 1 sequence is no-signal framed and covers both audiences (see that doc, line 8). On-market is ~1% of volume (4 of 366 in SF), so a second track is not worth building. No export-column check needed.
+- **No copy split.** The C1 sequence is no-signal framed and covers both audiences (see that doc, line 8). On-market is ~1% of volume (4 of 366 in SF), so a second track is not worth building. No export-column check needed.
 - **Apartment property types expanded to 8 (2026-07-31).** The original 5 plus `Apartments (generic)`, `High-rise Apartments`, `Apartment house (100+ units)`. These are the same asset under different county codes, not a scope change.
 - **Storage, parking garages and rooming houses were considered and rejected.** They qualify on the tax logic but they are new asset classes. Mitchell was sold apartment, rental and commercial property, and the list definition sent to him says exactly that. Adding them silently would be scope drift.
 - **Cooperative (Residential) excluded on substance.** Co-op ownership is shares in a housing corporation, generally personal property rather than real property, so generally not 1031 or DST eligible. Worth Mitchell confirming.

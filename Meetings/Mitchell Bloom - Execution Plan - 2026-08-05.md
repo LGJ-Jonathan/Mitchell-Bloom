@@ -5,7 +5,7 @@ Supersedes nothing; runs alongside `Mitchell Bloom - Promises Checklist.md` (whi
 
 **Scheduling constraint:** Mitch travels Aug 6 through Aug 10, back **Tuesday Aug 11**. Everything needing his input stalls until then. Front-load the rest.
 
-**Critical path:** disclaimer (#34) gates all sending → broker framing (#30) gates broker copy (#11) → V2 verification (#12-13) is the only campaign with finished list *and* finished copy.
+**Critical path:** disclaimer (#34) gates all sending → broker framing (#30) gates broker copy (#11) → V3 verification (#12-13) is the only campaign with finished list *and* finished copy.
 
 ---
 
@@ -25,10 +25,11 @@ Supersedes nothing; runs alongside `Mitchell Bloom - Promises Checklist.md` (whi
 - [ ] 8. Merge, dedupe on name+firm then phone, apply 3-per-firm cap after verification
 - [ ] 9. Enrich missing emails: firm domain → Apollo/Blitz → MillionVerifier
 - [ ] 10. Review CoStar ToS before scheduling any recurring pull
-- [ ] 11. Draft the broker sequence on a single offer *(blocked by #30)*
+- [x] 11. ~~Draft the broker sequence~~ — DONE Aug 5, `Copy/C3 - Business Brokers (referral channel).md`. Offer framing at #30 still unconfirmed
 
-### Concentrated stock (V2, mid-pipeline)
-- [ ] 12. Push `V2 Concentrated Stock - VERIFY these emails.csv` through MillionVerifier
+### Concentrated stock (V3, mid-pipeline)
+*Renumbered from V2 on 2026-08-10. `V2` now means the business-broker list. Task numbers are unchanged.*
+- [ ] 12. Push `_data/Mitchell Bloom - V2 Concentrated Stock - VERIFY these emails.csv` through MillionVerifier *(working file keeps its `V2` prefix, it was not renamed)*
 - [ ] 13. Run `build_final.py` on FULL report + MAP to produce the Instantly upload
 - [ ] 14. Split Batch 2 risky/catch-all to hold
 - [ ] 15. Confirm the SEC filing type before building further scraping on it
@@ -47,7 +48,7 @@ Supersedes nothing; runs alongside `Mitchell Bloom - Promises Checklist.md` (whi
 - [ ] 24. Rework the CTA to "show you how it works," quick-chat offer moves to his reply
 - [ ] 25. Read Mitch's Aug 4 email (his stated setup for "plan first, sell second")
 - [ ] 26. Pull BizBuySell Insight Report / IBBA Market Pulse for deal-failure data
-- [ ] 27. Decide whether V3 business-seller copy is retired or repointed
+- [ ] 27. Decide whether C5 business-seller copy is retired or repointed
 
 > #26 is the highest-leverage research item. Deal-failure data converts Mitch from
 > deal-killer to deal-saver, which answers the exact broker objection he keeps hitting.

@@ -3,7 +3,7 @@
 ## Why this exists
 
 `Leads/Mitchell Bloom - ICP List-Building Spec.md` line 36 marks timing, Mitch's stated highest
-value target, as ❌ impossible for Campaign 2. `Copy/Vertical 2` line 3 says it plainly: *"No public
+value target, as ❌ impossible for Campaign 2. `Copy/C2 - Concentrated-Stock Holders` line 3 says it plainly: *"No public
 selling signal exists in bulk for this ICP."* Campaign 2 therefore runs as a master bucket, with
 tenure at a post-IPO employer as the only proxy for "this person holds appreciated stock."
 
@@ -98,6 +98,6 @@ Two rules carried over from the spec:
   this pipeline does not fix it. A conversation for Jay.
 - **Work-email deliverability is untested** for this client. These are corporate inboxes at large
   companies, not the B2C-leaning addresses Campaign 1 reaches. Watch the first send.
-- **Copy needs a timing variant.** `Copy/Vertical 2` line 3's premise is now wrong, and E2-B already
+- **Copy needs a timing variant.** `Copy/C2 - Concentrated-Stock Holders` line 3's premise is now wrong, and E2-B already
   carries the right line ("this only works if it is set up before you sign"). Small delta, but it
   needs Mitch's sign-off. Three emails maximum, no fourth.

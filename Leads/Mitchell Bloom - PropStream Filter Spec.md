@@ -4,13 +4,13 @@
 > This is the **trophy / luxury home** spec: Single Family, Condo, Seasonal/Vacation. Somebody's **home**. It is **Campaign 4, Phase 2** in the launch order and is **not** the launch campaign.
 >
 > **Terminology warning — the word "residential" is ambiguous here, do not rely on it:**
-> - This segment used to be called "Trophy / **Residential** Owners," and the copy filenames still are (`Copy/Vertical 1. Trophy-Residential Owners…`).
+> - This segment used to be called "Trophy / **Residential** Owners," and the copy filenames still are (`Copy/C4 - Trophy-Residential Owners…`).
 > - But **PropStream's own UI** uses "Residential" as a top-level property **tab**, and that tab contains a **Multi-Family** sub-section holding duplexes, triplexes and apartment buildings — which belong to **Campaign 1**, not here.
 > - So "Residential" names both this segment *and* the tab Campaign 1 works inside. **Disambiguate by property type, never by the word residential:** this doc = Single Family / Condo / Seasonal. Campaign 1 = Multi-Family / MHP / Commercial.
 > **For Campaign 1** (apartment / rental / MHP / commercial sellers, the current launch priority) the paste-ready configs are in **`Leads/Mitchell Bloom - PropStream Filters Launch.md`** ← that is the doc to run. Use this doc for method and rationale only. Do not run these property types for Campaign 1.
 
-**ICP:** Vertical 1, Trophy / Residential Owners
-**Feeds:** `Copy/Vertical 1. Trophy-Residential Owners (No Selling Signals).md` and `(Selling Signals).md`
+**ICP:** C4, Trophy / Residential Owners
+**Feeds:** `Copy/C4 - Trophy-Residential Owners (No Selling Signals).md` and `(Selling Signals).md`
 **Sequencer:** Instantly · **Merge field needed:** first name + email
 **Built:** 2026-07-21, from the July 14 strategy call, the 2nd analysis (ICP-B), and the intake avatar.
 **Updated:** 2026-07-29 — timing flipped to on-market-first per Mitch's comment on the copy doc; duplicate market lists merged; troubleshooting contradiction fixed.
@@ -192,7 +192,7 @@ Check exactly four:
 - ✅ Condominium (Residential)
 - ✅ Seasonal, Cabin, Vacation Residence *(sharpest type: second homes get **no** Section 121 exclusion, so the full gain is exposed. Critical for Vail, Aspen, Montecito.)*
 
-**Multi-Family: select none.** The Vertical 1 copy is written around the word *home*. A duplex or trailer-park owner receiving it reads as spray-and-pray. See the parked segment at the bottom of this doc.
+**Multi-Family: select none.** The C4 copy is written around the word *home*. A duplex or trailer-park owner receiving it reads as spray-and-pray. See the parked segment at the bottom of this doc.
 
 **Year Built: leave blank.** Redundant against Years of Ownership.
 
@@ -217,7 +217,7 @@ Feeds `(Selling Signals).md`. Expect roughly **5-10% the size of List A**. That 
 - **On or Off Market:** `Off Market`
 - MLS Status: clear all
 
-Feeds `Vertical 1. Trophy-Residential Owners (No Selling Signals).md`. These owners are off market **because** of the tax hit, which is exactly the angle that copy leads with. Still the bigger list by an order of magnitude, but demoted to secondary: Mitch wants listed and pending led with.
+Feeds `C4 - Trophy-Residential Owners (No Selling Signals).md`. These owners are off market **because** of the tax hit, which is exactly the angle that copy leads with. Still the bigger list by an order of magnitude, but demoted to secondary: Mitch wants listed and pending led with.
 
 Leave MLS Status Date, Days on Market, MLS Listing Amount, Listed Below Market Price, and MLS Keywords blank. Keywords in particular ("motivated seller," "as-is") pull toward distress.
 

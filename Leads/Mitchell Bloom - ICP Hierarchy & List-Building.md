@@ -6,8 +6,48 @@
 
 > ### 🔄 AUG 5 CHANGE — Campaign 3: business sellers ➜ business brokers
 > **What happened.** We told Mitch the direct business-seller play is blocked: marketplace listings are deliberately anonymized (no company name, no owner, NDA-gated), so there is no path from a listing to an inbox at scale. Mitch's answer: *"You see all the brokers on the right side? Maybe we do a campaign where we reach out to the business brokers."* Jonathan: *"That is a lot more doable."* Mitch has cold-called these brokers and reports **they all pick up the phone**.
-> **Effect:** the ~8,800-broker channel (previously Phase 2, rank 5) **is promoted into the Campaign 3 slot**, sourced from **BizBuySell's broker directory** rather than Apollo. The direct business-seller marketplace play is **parked** (its copy stays on file, `Copy/Vertical 3`).
+> **Effect:** the ~8,800-broker channel (previously Phase 2, rank 5) **is promoted into the Campaign 3 slot**, sourced from **BizBuySell's broker directory** rather than Apollo. The direct business-seller marketplace play is **parked** (its copy stays on file, `Copy/C5 - Business Sellers`).
 > **Full scrape spec:** `Leads/Mitchell Bloom - BizBuySell Broker Scrape Spec.md`.
+
+---
+
+## 📛 NAMING KEY (set 2026-08-05 — use these, nothing else)
+
+The old `Vertical N` scheme is retired. It broke because filenames, in-file headers, and
+campaign ranks all used different numbers, and two files were both called "Vertical 4."
+
+**Copy docs use `C<rank>`, matching the campaign rank in the launch table below.**
+Rank numbers are stable: a campaign keeps its number when its priority or phase changes.
+Status (Phase 1 / Phase 2 / PARKED) lives in the doc header, never in the number.
+
+| Campaign | Copy doc | List files |
+|---|---|---|
+| C1 — Property sellers (apartment / rental / MHP / commercial) | `Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md` | `Leads/V1 …` |
+| C2 — Concentrated-stock holders | `Copy/C2 - Concentrated-Stock Holders.md` | `Leads/V3 …`, `_data/V3 …` |
+| C3 — Business brokers (referral channel) | `Copy/C3 - Business Brokers (referral channel).md` | `Leads/V2 Brokers …`, `Leads/V2+V3 Brokers …` ⚠️ |
+| C4 — Trophy / residential owners (2 variants) | `Copy/C4 - Trophy-Residential Owners (…).md` | not built |
+| C5 — Business sellers ($2M–$20M), **PARKED** | `Copy/C5 - Business Sellers ($2M-$20M) [PARKED].md` | none, play parked Aug 5 |
+
+**🔄 List renumbering, 2026-08-10.** Concentrated stock moved from `V2` to **`V3`**, and **`V2`
+now means the business-broker list**. This reverses the mapping recorded here on Aug 5. The
+C scale did not move: concentrated-stock copy is still `Copy/C2`. **The V and C numbers are
+independent scales and are not meant to line up.**
+
+Renamed: `Leads/V3 - INSTANTLY UPLOAD (merged).csv` · `Leads/V3 Merger Triggers - *.csv` ·
+`_data/V3 - BATCH 2 (risky, hold).csv` · `Mitchell Bloom - V3 Build Spec (Blitz).md` ·
+`Mitchell Bloom - V3 Data Engineer Request.md`. Method doc:
+`Mitchell Bloom - V3 Concentrated Stock (list + method).md`.
+
+**⚠️ Two collisions remain, both in the broker CSVs.** In those filenames `V2`/`V3`/`V4` denote
+**scrape legs** (BizBuySell, IBBA, national), not campaigns:
+
+- `V2 Brokers - …` and `V2+V3 Brokers - …` now agree with `V2` meaning brokers, but the `+V3`
+  half reads as if it referenced concentrated stock. It does not. It means the IBBA leg.
+- `V3 IBBA - …` collides directly with `V3` now meaning concentrated stock.
+
+The broker CSVs were **not** renamed: they are live inputs to the Clay and MillionVerifier runs
+in flight. Rename the whole broker set to `C3 Brokers - <leg>` once that pipeline finishes, which
+removes both collisions at once.
 
 ====================================================================
 ## PART 1 — INTERNAL ICP ANALYSIS & LIST-BUILDING
@@ -18,10 +58,10 @@
 | Rank | Campaign | Source | Copy | Phase |
 |---|---|---|---|---|
 | **1** | **Apartment / rental / commercial RE sellers** (individually owned) | PropStream | ❌ to write | 🟢 Phase 1 |
-| **2** | **Concentrated stock holders** (recently-IPO'd cos) | Apollo + LinkedIn | ✅ Vertical 2 | 🟢 Phase 1 |
+| **2** | **Concentrated stock holders** (recently-IPO'd cos) | Apollo + LinkedIn | ✅ C2 | 🟢 Phase 1 |
 | **3** | **Business brokers** (~8,800 nationwide) 🔄 *replaced business sellers Aug 5* | **BizBuySell directory scrape** (+ IBBA, Apollo/Blitz enrich) | ❌ to write | 🟢 Phase 1 |
-| 4 | Trophy / residential home owners | PropStream | ✅ Vertical 1 (×2) | 🟡 Phase 2 |
-| 5 | Business sellers ($2M–$20M) 🔄 *parked Aug 5, was Campaign 3* | Marketplaces + Apollo | ✅ Vertical 3 | 🟠 Parked — sellers anonymized |
+| 4 | Trophy / residential home owners | PropStream | ✅ C4 (×2) | 🟡 Phase 2 |
+| 5 | Business sellers ($2M–$20M) 🔄 *parked Aug 5, was Campaign 3* | Marketplaces + Apollo | ✅ C5 | 🟠 Parked — sellers anonymized |
 | 6 | Luxury real-estate brokers (channel for trophy) | Apollo | — | 🟡 Phase 2 |
 | 7 | Institutional / LLC-veiled commercial RE | county / niche | — | 🔴 Deferred |
 | 8 | Farmland | TBD | — | 🔴 Unvalidated |
@@ -56,7 +96,7 @@
 
 --------------------------------------------------------------------
 ### 🟢 CAMPAIGN 2 — CONCENTRATED STOCK HOLDERS  ⭐ highest confidence ("the easiest")
-*Source: Apollo + LinkedIn. Copy: `Copy/Vertical 2. Concentrated-Stock Holders.md` (written).*
+*Source: Apollo + LinkedIn. Copy: `Copy/C2 - Concentrated-Stock Holders.md` (written).*
 
 **Who:** long-tenured / early employees holding concentrated, highly appreciated stock at companies that IPO'd in the last 5–10 years with broad employee equity. Examples raised: **SpaceX, NVIDIA, Uber, Yahoo**; the 30-year employee with founder-priced shares. Concentrated in high-tax states.
 
@@ -105,7 +145,7 @@
 
 --------------------------------------------------------------------
 ### 🟠 PARKED — BUSINESS SELLERS ($2M–$20M)  *was Campaign 3 until Aug 5*
-*Copy already written and kept on file: `Copy/Vertical 3. Business Sellers ($2M-$20M).md`.*
+*Copy already written and kept on file: `Copy/C5 - Business Sellers ($2M-$20M) [PARKED].md`.*
 
 **Why parked:** marketplace listings hide the seller. There is no reliable path from an anonymized listing to an owner's inbox at scale, which is exactly what triggered the Aug 5 pivot to brokers. Not deleted — if the broker channel produces sellers, or if a match-and-enrich route proves out, this comes back.
 
@@ -116,7 +156,7 @@
 --------------------------------------------------------------------
 ### 🟡 PHASE 2 — launch when promoted
 
-**4. TROPHY / RESIDENTIAL HOME OWNERS** — PropStream. Individual owners of high-value, long-held homes (bought decades ago, huge appreciation; NOT new builds). **Most build-ready segment:** filters done (1,508 in Beverly Hills) + both sequences written (`Copy/Vertical 1…`). Same PropStream method + On/Off-Market timing split as Campaign 1. Demoted as a priority call; launches fast when promoted.
+**4. TROPHY / RESIDENTIAL HOME OWNERS** — PropStream. Individual owners of high-value, long-held homes (bought decades ago, huge appreciation; NOT new builds). **Most build-ready segment:** filters done (1,508 in Beverly Hills) + both sequences written (`Copy/C4 - Trophy-Residential Owners…`). Same PropStream method + On/Off-Market timing split as Campaign 1. Demoted as a priority call; launches fast when promoted.
 
 **5. ~~BUSINESS BROKERS~~ — 🔄 promoted to Campaign 3 on Aug 5.** See the Campaign 3 section above. (Note the reversal: on the July 14 call Mitch said brokers usually won't engage and to go direct to owners; on Aug 5 he reversed that himself once the direct-seller list proved unsourceable, and reported brokers all answer their phones.)
 
@@ -164,7 +204,7 @@
 --------------------------------------------------------------------
 ### OPEN QUESTIONS TO RESOLVE
 1. **⚠️ Guarantee & B2C tension (raise with Jay).** Mitch's July 8 email: his agreement reportedly requires leads Apollo-available, companies <50 employees, **not filtered by city/zip**. His real targeting is geo-specific, individual-owner (arguably B2C), value-filtered, and his top target (in-contract sellers) isn't an Apollo motion. Close expectations directly — he was explicit he doesn't want "unfulfilled expectations."
-2. **Campaign 1 copy** is written (`Copy/Vertical 4`), reviewed by Mitch, and revised per his notes (1031 distinction added; listed/pending prioritized). **The open build blocker is now the Campaign 3 broker sequence — it does not exist yet.**
+2. **Campaign 1 copy** is written (`Copy/C1 - Property Sellers`), reviewed by Mitch, and revised per his notes (1031 distinction added; listed/pending prioritized). **The open build blocker is now the Campaign 3 broker sequence — it does not exist yet.**
 2b. **Broker email fill rate is unknown** until the BizBuySell + IBBA legs run. BizBuySell exposes no email, so the list depends entirely on the Apollo/Blitz enrich step. Don't quote Mitch a broker count before we see a verified rate.
 2c. **CoStar ToS** on recurring BizBuySell scraping — review before scheduling a repeat run.
 3. Can we find commercial / MHP owners in bulk via PropStream Individual filter, or fall back to the "needle in a haystack" test? (Campaign 1 tests this.)

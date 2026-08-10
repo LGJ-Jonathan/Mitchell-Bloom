@@ -170,5 +170,5 @@ Route role emails into a **separate, tagged segment**. Do not blend them into th
 ## Handoff
 
 Final verified list → `propstream-export-to-instantly` shape → Instantly.
-Copy: `Copy/Vertical 5. Business Brokers (referral channel).md`.
+Copy: `Copy/C3 - Business Brokers (referral channel).md`.
 Merge fields the copy expects: `{{firstName}}` (required), `{{liveListings}}` (optional, needs a fallback configured).

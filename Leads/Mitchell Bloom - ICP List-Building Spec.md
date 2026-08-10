@@ -71,7 +71,7 @@ All **individually owned only** (Mitch: *"ma-pa"*; explicitly **exclude PE / ins
 **⭐ ON-MARKET PRIMARY (2026-07-29, per Mitch — supersedes the July 24 off-market call below):** Mitch, comment on the copy doc: *"Very good. Would be optimal to find properties just listed and/or pending."* So: **On Market** (Listing Type For Sale; Status Active, Active Under Contract, Coming Soon, Contingent) is the primary list, **Pending** runs as its own separate list, and **Off Market** is the secondary volume backfill. Full recipe in `Leads/Mitchell Bloom - PropStream Filters Launch.md`.
 
 > *Superseded reasoning, kept for context (July 24):* on-market-only produced rounding-error counts (SF apartments: 509 qualified owners → **6** actively listed), and off-market is arguably the better-timed list for a DST since the trust must be set up **before** a sale closes. Mitch's own call language — *"people actually delay selling because they don't want to pay that capital gains"* — describes off-market holders. That volume problem is real and has not gone away, which is why off-market stays as the backfill rather than being dropped. But the priority call is the client's, and he made it.
-**✅ Copy — written:** `Copy/Vertical 4. Apartment-Rental-Commercial Sellers.md`. One **no-signal** sequence (3/2/2, stops at E3) covers **both** the off-market and on-market lists. Leads with **depreciation recapture** + **failed-1031** (Kelly & David) + the *"toilets, trash, tenants, maintenance"* pain; uses investor-native terms (1031, recapture) this audience knows.
+**✅ Copy — written:** `Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md`. One **no-signal** sequence (3/2/2, stops at E3) covers **both** the off-market and on-market lists. Leads with **depreciation recapture** + **failed-1031** (Kelly & David) + the *"toilets, trash, tenants, maintenance"* pain; uses investor-native terms (1031, recapture) this audience knows.
 
 ## Campaign 2 — Concentrated appreciated stockholders  ⭐ highest scrape confidence
 **Source: Apollo (+ LinkedIn).**
@@ -86,7 +86,7 @@ All **individually owned only** (Mitch: *"ma-pa"*; explicitly **exclude PE / ins
 - **Email status:** Verified
 > Do not filter on title/department — equity is a tenure story, not a seniority story.
 
-**🔄 Aug 5 — SEC EDGAR as a second source (confirmed on the call).** Registration statements (**S-1**) and related filings name early employees and their share counts, and EDGAR is API-accessible back to the 1990s. Mitch confirmed the database (*"it's listed with the SEC EDGAR database"*) and steered us past the household names: the value is in the **companies that never picked up broad public traction**, plus the current AI/data-center and crypto-adjacent wave where *"all these stealth little companies"* are minting holders now. Work already in flight under `Leads/sec-triggers/` and the V2 merger-trigger files. Mitch's own caution: don't bother going back as far as the 1990s.
+**🔄 Aug 5 — SEC EDGAR as a second source (confirmed on the call).** Registration statements (**S-1**) and related filings name early employees and their share counts, and EDGAR is API-accessible back to the 1990s. Mitch confirmed the database (*"it's listed with the SEC EDGAR database"*) and steered us past the household names: the value is in the **companies that never picked up broad public traction**, plus the current AI/data-center and crypto-adjacent wave where *"all these stealth little companies"* are minting holders now. Work already in flight under `Leads/sec-triggers/` and the `Leads/V3 Merger Triggers - *.csv` files. Mitch's own caution: don't bother going back as far as the 1990s.
 
 ## Campaign 3 — Business brokers (~8,800 nationwide)  🔄 *new as of Aug 5*
 **Source: BizBuySell broker directory scrape (Leg A) + IBBA member directory (Leg B) → Apollo/Blitz email enrich → MillionVerifier.**
@@ -131,7 +131,7 @@ Full build spec, run order and cost: **`Leads/Mitchell Bloom - BizBuySell Broker
 ## ICP 4 — Trophy / residential home owners  (filters + copy already built)
 **Source: PropStream.**
 Individual owners of high-value, long-held homes (bought decades ago, huge appreciation; NOT new builds).
-**Status:** most build-ready segment we have — PropStream filters done (1,508 in Beverly Hills) and **both sequences already written** (`Copy/Vertical 1…`). Demoted to Phase 2 as a *priority* call (real property above is Mitch's bigger business), but it can launch on short notice.
+**Status:** most build-ready segment we have — PropStream filters done (1,508 in Beverly Hills) and **both sequences already written** (`Copy/C4 - Trophy-Residential Owners…`). Demoted to Phase 2 as a *priority* call (real property above is Mitch's bigger business), but it can launch on short notice.
 **Core method:** Estimated Value tiered by market ($2–3M floor) · Owner Type **Individual** · Years of Ownership 15–25+ · Pre-Probate **Exclude** · High Equity.
 **⭐ Timing split:** List A — On Market / For Sale (prioritize) · List B — Off Market.
 
@@ -146,7 +146,7 @@ Individual owners of high-value, long-held homes (bought decades ago, huge appre
 # 🟠 PARKED (Aug 5)
 
 ## ICP 5 — Business owners / sellers  *was Campaign 3 until Aug 5*
-**Why parked:** marketplace listings are anonymized by design, so there is no reliable route from a listing to the owner's inbox at scale — the finding that triggered the Aug 5 pivot to brokers. Copy already exists and stays on file: `Copy/Vertical 3. Business Sellers ($2M-$20M).md`. Revisit if the broker channel surfaces sellers directly, or if a match-and-enrich route proves out.
+**Why parked:** marketplace listings are anonymized by design, so there is no reliable route from a listing to the owner's inbox at scale — the finding that triggered the Aug 5 pivot to brokers. Copy already exists and stays on file: `Copy/C5 - Business Sellers ($2M-$20M) [PARKED].md`. Revisit if the broker channel surfaces sellers directly, or if a match-and-enrich route proves out.
 
 **The Apollo master bucket as designed (never run):** Seniority Owner/Founder/Partner/CEO · Titles Owner, Founder, President, CEO, Managing Member, Principal, Sole Proprietor · Headcount **1–50** (200 for mfg/aerospace) · Revenue **$2M–$20M** · industry/keyword lists per vertical (dental/orthodontics, veterinary, med-spa/aesthetics, HVAC/plumbing/electrical, construction, manufacturing, logistics, aerospace/defense, industrial waste) · Company Location high-tax states · Founded before ~2005.
 **The marketplace signal play as designed:** scrape listing pages (BizBuySell, BusinessesForSale.com, BizQuest, LoopNet, BusinessMart, BizForSale.co) → filter $2M+ in target states → AI-match the anonymized listing to a real company (Clay) → enrich owner via Apollo/Blitz.
@@ -183,7 +183,7 @@ Big Bitcoin/crypto gains wanting to sell. Findable because crypto people put it 
 ## 3. Open items to resolve
 
 1. **⚠️ Guarantee & B2C tension (raise with Jay — not a list decision).** Mitch's July 8 email flags real anxiety: his agreement reportedly requires leads to be Apollo-available, companies **<50 employees**, and **not filtered by city/zip**. His actual targeting is geo-specific (high-tax states), **individual-owner (arguably B2C)**, and value-filtered — and his highest-value target (in-contract sellers) isn't an Apollo motion at all. Close expectations with him directly so the guarantee terms and the real campaign match. He was explicit he doesn't want "unfulfilled expectations."
-2. ~~ICP 1 copy~~ — **written** (`Copy/Vertical 4. Apartment-Rental-Commercial Sellers.md`). **The Phase-1 build blocker is now the Campaign 3 broker sequence, which does not exist yet.**
+2. ~~ICP 1 copy~~ — **written** (`Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md`). **The Phase-1 build blocker is now the Campaign 3 broker sequence, which does not exist yet.**
 3. **Deal-size floor:** intake USP says **$1M** cap-gains min / 90 days; call set **$2M** RE floor. Pick one threshold for the revenue/value proxy.
 4. **Broker referral message:** Campaign 3 (business brokers) and ICP 6 (luxury RE brokers) both run a referral/channel message, distinct from every seller sequence. Campaign 3's needs writing.
 5. **CoStar ToS** on recurring BizBuySell broker-directory scraping — review before scheduling a repeat run.

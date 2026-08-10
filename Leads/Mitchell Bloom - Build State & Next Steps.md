@@ -6,44 +6,50 @@ Session close: 2026-08-06. Written as a handoff so work can resume without re-de
 
 ## Where things stand
 
-| Vertical | State |
+| Campaign | State |
 |---|---|
-| **V2, concentrated-stock holders** | **DONE.** 10,328 verified sendable, delivered, ready to load into Instantly |
-| V2 batch 2 | 4,570 catch-all and unknown addresses, held for a later send on separate inboxes |
-| **Campaign C, M&A trigger** | **Discovery only.** Gated before the Blitz pull. See below |
-| V3, business sellers (BizBuySell) | 2,591 raw listings pulled, not enriched. Parked |
+| **V3, concentrated-stock holders** | **DONE.** 10,352 verified sendable, delivered, ready to load into Instantly |
+| V3 batch 2 | 4,570 catch-all and unknown addresses, held for a later send on separate inboxes. Now in `_data/` |
+| **M&A trigger layer** | **Discovery only.** Gated before the Blitz pull. See below |
+| V2, business brokers (BizBuySell + IBBA) | broker channel, scraped and part-enriched |
 | V1, apartments and rentals | Previously delivered |
+
+> **Renumbered 2026-08-10.** Concentrated stock was `V2` and is now **`V3`**. `V2` now means
+> the business-broker list. The old `V3, business sellers` line is gone: that play was parked
+> on Aug 5 and replaced by the broker channel. Copy docs use a separate `C` scale and did not
+> change; concentrated-stock copy stays at `Copy/C2 - Concentrated-Stock Holders.md`.
 
 ---
 
-## V2 deliverables, all in `Leads/`
+## V3 deliverables
 
-| File | Rows |
-|---|---|
-| `V2 - INSTANTLY UPLOAD (merged).csv` | **10,328** with a `cohort` column, A or B |
-| `V2 - INSTANTLY UPLOAD (A) long-tenure.csv` | 7,506 |
-| `V2 - INSTANTLY UPLOAD (B) pre-IPO.csv` | 2,822 |
-| `V2 - BATCH 2 (risky, hold).csv` | 4,570 |
-| `V2 - HELD (executive titles).csv` | 47 |
+| File | Rows | Where |
+|---|---|---|
+| `V3 - INSTANTLY UPLOAD (merged).csv` | **10,352** with a `cohort` column, A or B | `Leads/` |
+| `V3 - BATCH 2 (risky, hold).csv` | 4,570 | `_data/` |
 
-The merged file is the one to load. The V2 sequence uses `{{firstName}}` and nothing else,
-so two campaigns with identical copy only buys reporting; the `cohort` column gives that
-inside a single campaign. Split files kept for convenience.
+The merged file is the one to load. The sequence uses `{{firstName}}` and nothing else, so two
+campaigns with identical copy only buys reporting; the `cohort` column gives that inside a
+single campaign.
 
-Full methodology, funnel and limitations: `Mitchell Bloom - V2 Scoring & Run Log.md`.
+The split cohort files, the executive HELD file and the earlier sample file **were deleted as
+superseded**. The merged file carries the cohort column, so the splits added nothing but a
+chance to diverge.
 
-### Open decisions on V2
+Full methodology, funnel, provenance and limitations, in one document:
+`Mitchell Bloom - V3 Concentrated Stock (list + method).md`.
 
-1. **The 47 held executive rows.** Printed for review, not yet ruled on. Some are real
-   principals (Bill Gates, Hock Tan, Palmer Luckey, Kimbal Musk, Dara Khosrowshahi,
-   Brian Chesky). Some are self-reported nonsense worth restoring ("Georgia / Microsoft /
-   President", "Vice CEO", "Ocean Trump / CFO"). Rows for Snowflake "Field CTO Office",
-   "Ea to CEO" and DoorDash "Sr Executive Business Partner" look like staff the
-   `office of the` / `assistant to` filter missed. Restoring is a copy-paste; every row
-   carries `wouldHaveBeenCampaign`.
+### Open decisions on V3
+
+1. **The executive hold-out is resolved.** All 47 were reviewed on 2026-08-10 and **24 were
+   restored**, taking the file from 10,328 to 10,352. 23 remain held, each verified as the
+   actual officer or founder of that company. Two holds are worth a second look: Kimbal Musk
+   is a director rather than an officer or founder, and Stacy Martinet holds a real Adobe
+   office but is also VP-level, which this build otherwise keeps. See section 4 of the method
+   doc.
 2. **Batch 2 needs separate inboxes.** These are catch-all addresses, unproven rather than
    verified. Do not send them from the domains carrying the main campaign.
-3. **Corporate-inbox deliverability is untested for this client.** Every one of the 10,328
+3. **Corporate-inbox deliverability is untested for this client.** Every one of the 10,352
    is a work address at a large enterprise with mature filtering. V1 was personal-domain
    heavy and is not a read on this. Watch the first 200 sends.
 
@@ -51,7 +57,7 @@ Full methodology, funnel and limitations: `Mitchell Bloom - V2 Scoring & Run Log
 
 ## Campaign C, M&A trigger: discovery complete, pull NOT run
 
-Source files: `Leads/V2 Merger Triggers - *.csv` and `Leads/sec-triggers/`.
+Source files: `Leads/V3 Merger Triggers - *.csv` and `Leads/sec-triggers/`.
 
 ```
 247  DEFM14A filings, trailing 12 months
@@ -78,10 +84,10 @@ HQ share:
 
 ```
 136,728  global headcount, in-geography targets with 500+ employees
-   ~25%  survive 5+ year tenure   (V2 measured 90,588 of 359,169)
+   ~25%  survive 5+ year tenure   (V3 measured 90,588 of 359,169)
 ~34,000  reachable
-   ~60%  email fill               (V2 measured 61.6%)
-   ~65%  verification pass        (V2 measured 65.3%)
+   ~60%  email fill               (V3 measured 61.6%)
+   ~65%  verification pass        (V3 measured 65.3%)
 ~13,000  sendable
 ```
 
@@ -107,6 +113,10 @@ months. The pending check is as of Aug 4, so refresh before any send.
 
 Data: `V2_SCORED_all.csv`, `V2_DROPPED.csv` (2,651 with reasons), `V2_SELECTED_26000.csv`,
 `V2_ENRICHED_26000.csv`, the VERIFY and MAP pair, `V2_SCORED_all_GAIN.csv`, `prices/`.
+
+> **These `_data/` files still carry the `V2_` prefix** and were not renamed, because the build
+> scripts reference them by name. Here the prefix is historical and means concentrated stock,
+> not brokers.
 
 Credentials live in `_data/.tiingo.env` (mode 600) and the blitz-api skill's own `.env`.
 Neither is committed.

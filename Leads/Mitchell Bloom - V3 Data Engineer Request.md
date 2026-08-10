@@ -1,6 +1,6 @@
-# Mitchell Bloom — Vertical 2 List Request (Apollo)
+# Mitchell Bloom — C2 List Request (Apollo)
 
-**Campaign:** Vertical 2, concentrated-stock holders. Employees sitting on large, low-basis
+**Campaign:** C2, concentrated-stock holders. Employees sitting on large, low-basis
 positions in their employer's stock.
 **Sequencer:** Instantly · **Merge field needed:** `{{firstName}}` only.
 
@@ -129,5 +129,5 @@ can reconcile.
 
 ## Questions to
 
-Shara — this is for the Bloom account, Vertical 2 of 4. Copy is already written and
+Shara — this is for the Bloom account, Campaign 2. Copy is already written and
 approved internally; the list is the only blocker.

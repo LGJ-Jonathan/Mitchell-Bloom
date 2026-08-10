@@ -1,4 +1,4 @@
-# Vertical 4 — Apartment / Rental / Commercial Sellers  (= Campaign 1, launch priority)
+# C1 - Property Sellers (Apartment / Rental / Mobile-Home Park / Commercial)  *(Campaign 1, launch priority)*
 
 **Campaign type:** Master bucket — individually-owned apartment buildings, rental properties, and commercial real estate. **OFF-MARKET (outbound) primary**; the small on-market "hot list" runs on this **same** sequence.
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge field:** `{{firstName}}` only

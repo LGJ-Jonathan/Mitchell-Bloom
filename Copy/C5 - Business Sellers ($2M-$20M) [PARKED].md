@@ -1,4 +1,4 @@
-# Vertical 3 — Business Sellers ($2M–$20M)
+# C5 - Business Sellers ($2M-$20M)  *(PARKED 2026-08-05 - sellers anonymized, replaced by C3 brokers)*
 
 **Campaign type:** Owners selling a business (deal size $2M–$20M, sweet spot $2M–$10M; single decision-maker). Signal-based via business-for-sale marketplaces + Crunchbase, plus the fast-selling-industries volume bucket.
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge field:** `{{firstName}}` only

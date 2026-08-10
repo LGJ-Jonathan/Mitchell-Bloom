@@ -22,7 +22,7 @@
 > **Pending is included on purpose.** Mitchell named it explicitly. Note the tension: residential/commercial pending typically closes in ~30 days and the structure must be in place **before** close, so some pending records will already be too late. It is kept as its **own separate saved search** so the count is visible and can be dropped on evidence rather than assumption.
 
 **Use:** paste-ready filter configs + full city list for an automated PropStream scrape.
-**Grounded in:** the July 14 strategy call, intake, Mitch's July 15 email (see `Leads/Mitchell Bloom - ICP List-Building Spec.md`), and Mitch's July 29 comments on the copy doc. Full recipe rationale in `Leads/Mitchell Bloom - PropStream Filter Spec.md` (that doc is the **trophy / Vertical 1** spec — use it for method and rationale only, not for this campaign's property types).
+**Grounded in:** the July 14 strategy call, intake, Mitch's July 15 email (see `Leads/Mitchell Bloom - ICP List-Building Spec.md`), and Mitch's July 29 comments on the copy doc. Full recipe rationale in `Leads/Mitchell Bloom - PropStream Filter Spec.md` (that doc is the **trophy / C4** spec — use it for method and rationale only, not for this campaign's property types).
 
 **Billing warning:** PropStream charges **per contact at export**. Confirm counts before exporting. Keep the 3 property-type searches separate so the same property is never paid for twice.
 
@@ -203,10 +203,10 @@ San Francisco CA, San Jose CA, Los Angeles CA, San Diego CA, Oakland CA, Sacrame
 - **VT + small metros are thin** on Apartments/Commercial but still add Rentals+MHP contacts.
 - **On-market volume is genuinely small.** SF apartments: 509 qualified owners, 6 actively listed. Do not fix this by loosening Owner Type, Pre-Probate, or the value floor. Fix it by running more cities, then by adding the Off Market backfill (Pass 2).
 - **Do not loosen to hit a number:** Owner Type = Individual, Pre-Probate = Exclude, and the $2M value floor all protect list quality and stay put.
-- **Copy status:** the Campaign 1 sequence is **written** — `Copy/Vertical 4. Apartment-Rental-Commercial Sellers.md`, client-facing Google Doc *"Bloom Financial Email Sequence - Apartment, Rental, Commercial (final)"*. It presumes an active or contemplated sale, which now matches the on-market list. Revised per Mitch's July 29 notes (1031 distinction added to E1-A).
+- **Copy status:** the Campaign 1 sequence is **written** — `Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md`, client-facing Google Doc *"Bloom Financial Email Sequence - Apartment, Rental, Commercial (final)"*. It presumes an active or contemplated sale, which now matches the on-market list. Revised per Mitch's July 29 notes (1031 distinction added to E1-A).
   - ⚠️ **One mismatch to watch:** E1 **Variant A** opens *"Are you holding off on selling your properties…"* — that reads wrong to someone who just listed. Variants B, C and D are fine on an on-market list. Either hold Variant A for the Pass 2 off-market backfill, or reword its opener.
 - **Verify emails** before upload — PropStream contact data is estimated/multi-match; bounce rate is the launch risk.
 
 ---
 
-*Campaign 1 build sheet. Last updated 2026-07-29 for Mitch's on-market / pending timing instruction. States = Mitch's high-tax targets (CA, NY, NJ, MA, MN, CO, HI, WI, VT, DC). Trophy enclaves excluded (Campaign 4). Method + rationale per the PropStream Filter Spec (trophy/V1 doc); scope per the ICP List-Building Spec.*
+*Campaign 1 build sheet. Last updated 2026-07-29 for Mitch's on-market / pending timing instruction. States = Mitch's high-tax targets (CA, NY, NJ, MA, MN, CO, HI, WI, VT, DC). Trophy enclaves excluded (Campaign 4). Method + rationale per the PropStream Filter Spec (trophy/C4 doc); scope per the ICP List-Building Spec.*

@@ -1,4 +1,4 @@
-# Vertical 2 — Concentrated-Stock Holders
+# C2 - Concentrated-Stock Holders  *(Campaign 2)*
 
 **Campaign type:** Master bucket — employees / former employees of companies that IPO'd in the last 5 to 10 years, holding large low-basis positions. No public "selling signal" exists in bulk for this ICP, so this is one master sequence (targeting signal = long tenure at a post-IPO employer = likely vested, likely holding).
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge field:** `{{firstName}}` only
