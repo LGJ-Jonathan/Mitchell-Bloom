@@ -1,11 +1,11 @@
-# Mitchell Bloom - V3 Build Spec (Blitz)
+# Mitchell Bloom - V3 Stock Holders Build Spec (Blitz)
 
 **Campaign:** C2, concentrated-stock holders. **List files:** `V3 …` (renumbered from `V2`
 on 2026-08-10; `V2` now means the business-broker list).
 **Source:** Blitz (`~/.claude/skills/blitz-api`). **Not** Apollo — see below.
 **Status:** pull in progress. Method validated; final counts pending run completion.
 
-> Companion doc: `Mitchell Bloom - V3 Data Engineer Request.md` is the same universe
+> Companion doc: `Mitchell Bloom - V3 Stock Holders Data Engineer Request.md` is the same universe
 > expressed as an Apollo handoff spec, for when the data engineer runs it instead.
 
 ---

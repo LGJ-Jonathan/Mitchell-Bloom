@@ -23,7 +23,7 @@ Status (Phase 1 / Phase 2 / PARKED) lives in the doc header, never in the number
 | Campaign | Copy doc | List files |
 |---|---|---|
 | C1 — Property sellers (apartment / rental / MHP / commercial) | `Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md` | `Leads/V1 …` |
-| C2 — Concentrated-stock holders | `Copy/C2 - Concentrated-Stock Holders.md` | `Leads/V3 …`, `_data/V3 …` |
+| C2 — Concentrated-stock holders | `Copy/C2 - Concentrated-Stock Holders.md` | `Leads/V3 Stock Holders …`, `_data/V3 Stock Holders …` |
 | C3 — Business brokers (referral channel) | `Copy/C3 - Business Brokers (referral channel).md` | `Leads/V2 Brokers …`, `Leads/V2+V3 Brokers …` ⚠️ |
 | C4 — Trophy / residential owners (2 variants) | `Copy/C4 - Trophy-Residential Owners (…).md` | not built |
 | C5 — Business sellers ($2M–$20M), **PARKED** | `Copy/C5 - Business Sellers ($2M-$20M) [PARKED].md` | none, play parked Aug 5 |
@@ -33,17 +33,25 @@ now means the business-broker list**. This reverses the mapping recorded here on
 C scale did not move: concentrated-stock copy is still `Copy/C2`. **The V and C numbers are
 independent scales and are not meant to line up.**
 
-Renamed: `Leads/V3 - INSTANTLY UPLOAD (merged).csv` · `Leads/V3 Merger Triggers - *.csv` ·
-`_data/V3 - BATCH 2 (risky, hold).csv` · `Mitchell Bloom - V3 Build Spec (Blitz).md` ·
-`Mitchell Bloom - V3 Data Engineer Request.md`. Method doc:
-`Mitchell Bloom - V3 Concentrated Stock (list + method).md`.
+**Filenames now carry the vertical name**, matching the `V1 Apartments …` and `V2 Brokers …`
+pattern, so a bare `V3` prefix no longer appears anywhere for this vertical:
+
+- `Leads/V3 Stock Holders - INSTANTLY UPLOAD.csv`
+- `Leads/V3 Stock Holders - Merger Triggers DEFM14A.csv`
+- `Leads/V3 Stock Holders - Merger Triggers LIVE.csv`
+- `_data/V3 Stock Holders - BATCH 2 (risky, hold).csv`
+- `Leads/Mitchell Bloom - V3 Stock Holders Build Spec (Blitz).md`
+- `Leads/Mitchell Bloom - V3 Stock Holders Data Engineer Request.md`
+- `Leads/Mitchell Bloom - V3 Stock Holders (list + method).md` (the method doc)
 
 **⚠️ Two collisions remain, both in the broker CSVs.** In those filenames `V2`/`V3`/`V4` denote
 **scrape legs** (BizBuySell, IBBA, national), not campaigns:
 
 - `V2 Brokers - …` and `V2+V3 Brokers - …` now agree with `V2` meaning brokers, but the `+V3`
   half reads as if it referenced concentrated stock. It does not. It means the IBBA leg.
-- `V3 IBBA - …` collides directly with `V3` now meaning concentrated stock.
+- `V3 IBBA - …` still shares the `V3` prefix with concentrated stock. Adding the vertical name
+  to the stock-holder files softens this a lot (`V3 Stock Holders` versus `V3 IBBA` reads
+  clearly), but the leg numbers and the vertical numbers still occupy one namespace.
 
 The broker CSVs were **not** renamed: they are live inputs to the Clay and MillionVerifier runs
 in flight. Rename the whole broker set to `C3 Brokers - <leg>` once that pipeline finishes, which

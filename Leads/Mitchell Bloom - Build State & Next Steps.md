@@ -25,8 +25,8 @@ Session close: 2026-08-06. Written as a handoff so work can resume without re-de
 
 | File | Rows | Where |
 |---|---|---|
-| `V3 - INSTANTLY UPLOAD (merged).csv` | **10,352** with a `cohort` column, A or B | `Leads/` |
-| `V3 - BATCH 2 (risky, hold).csv` | 4,570 | `_data/` |
+| `V3 Stock Holders - INSTANTLY UPLOAD.csv` | **10,352** with a `cohort` column, A or B | `Leads/` |
+| `V3 Stock Holders - BATCH 2 (risky, hold).csv` | 4,570 | `_data/` |
 
 The merged file is the one to load. The sequence uses `{{firstName}}` and nothing else, so two
 campaigns with identical copy only buys reporting; the `cohort` column gives that inside a
@@ -37,7 +37,7 @@ superseded**. The merged file carries the cohort column, so the splits added not
 chance to diverge.
 
 Full methodology, funnel, provenance and limitations, in one document:
-`Mitchell Bloom - V3 Concentrated Stock (list + method).md`.
+`Mitchell Bloom - V3 Stock Holders (list + method).md`.
 
 ### Open decisions on V3
 
@@ -57,7 +57,7 @@ Full methodology, funnel, provenance and limitations, in one document:
 
 ## Campaign C, M&A trigger: discovery complete, pull NOT run
 
-Source files: `Leads/V3 Merger Triggers - *.csv` and `Leads/sec-triggers/`.
+Source files: `Leads/V3 Stock Holders - Merger Triggers *.csv` and `Leads/sec-triggers/`.
 
 ```
 247  DEFM14A filings, trailing 12 months

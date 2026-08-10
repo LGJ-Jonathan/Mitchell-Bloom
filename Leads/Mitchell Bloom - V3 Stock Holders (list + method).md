@@ -23,7 +23,7 @@ Long-tenured employees at 40 companies that put equity in ordinary employees' ha
 in high state income tax markets plus Seattle. The offer is capital-gains deferral on a
 concentrated, low-basis position.
 
-**The one file to load: `Leads/V3 - INSTANTLY UPLOAD (merged).csv`.**
+**The one file to load: `Leads/V3 Stock Holders - INSTANTLY UPLOAD.csv`.**
 
 The sequence uses `{{firstName}}` and nothing else, so two separate campaigns with identical
 copy would only buy reporting. The `cohort` column gives that inside a single campaign.
@@ -135,7 +135,7 @@ answer added the qualifier that matters: "IPO'd **and** gave stock options to a 
 of employees."
 
 **The remaining 35 are our extension of that logic, not client instructions.** The extension
-is written down in `Mitchell Bloom - V3 Data Engineer Request.md` and was built to the rule
+is written down in `Mitchell Bloom - V3 Stock Holders Data Engineer Request.md` and was built to the rule
 Jay stated: broad employee equity, not merely a large or well-known employer.
 
 **Yahoo was named on the call and is deliberately absent.** Yahoo no longer exists as an
@@ -451,7 +451,7 @@ have a capital-gains problem.
 **No timing signal.** Cohorts A and B identify people who probably hold a gain, with no
 indication of when they might sell. The M&A trigger layer, which would have supplied a dated
 compulsory liquidity event, was scoped and gated but never built. It was the plan's argued
-first send. Source files are `Leads/V3 Merger Triggers - *.csv` and `Leads/sec-triggers/`.
+first send. Source files are `Leads/V3 Stock Holders - Merger Triggers *.csv` and `Leads/sec-triggers/`.
 
 **Cohort B is exhausted.** All 6,713 bucket-A rows and 1,731 bucket-B rows in the clean pool
 were selected. Cohort B cannot grow without expanding the company universe beyond the current
@@ -639,18 +639,17 @@ Every item is a decision made during the build rather than a fact established by
 
 | File | Rows | Where |
 |---|---|---|
-| `V3 - INSTANTLY UPLOAD (merged).csv` | 10,352 | `Leads/` |
-| `V3 - BATCH 2 (risky, hold).csv` | 4,570 | `_data/` |
+| `V3 Stock Holders - INSTANTLY UPLOAD.csv` | 10,352 | `Leads/` |
+| `V3 Stock Holders - BATCH 2 (risky, hold).csv` | 4,570 | `_data/` |
 
-**`Leads/` holds only `V3 - INSTANTLY UPLOAD (merged).csv` for this vertical.** Batch 2 has
+**`Leads/` holds only `V3 Stock Holders - INSTANTLY UPLOAD.csv` for this vertical.** Batch 2 has
 moved to `_data/`. The split cohort files (`(A) long-tenure`, `(B) pre-IPO`), the executive
 `HELD` file and the earlier sample file **were deleted as superseded**. The merged file carries
 the `cohort` column, so the splits added nothing but a chance to diverge, which is the same
 reason this document exists.
 
 Merger-trigger source files, for the layer that was never built:
-`Leads/V3 Merger Triggers - DEFM14A 12mo.csv`, `Leads/V3 Merger Triggers - LIVE (pending
-deals).csv`, and `Leads/sec-triggers/`.
+`Leads/V3 Stock Holders - Merger Triggers DEFM14A.csv`, `Leads/V3 Stock Holders - Merger Triggers LIVE.csv`, and `Leads/sec-triggers/`.
 
 ### Working files, `_data/`, gitignored and local only
 
