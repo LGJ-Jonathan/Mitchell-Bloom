@@ -1,242 +1,287 @@
 # C2 - Concentrated-Stock Holders  *(Campaign 2)*
 
-**Campaign type:** Master bucket — employees / former employees of companies that IPO'd in the last 5 to 10 years, holding large low-basis positions. No public "selling signal" exists in bulk for this ICP, so this is one master sequence (targeting signal = long tenure at a post-IPO employer = likely vested, likely holding).
+> **Rewritten 2026-08-05** from the Aug 5 call, adapted from the C1 structure. Previous version is in git history.
+> Client-facing doc: *Bloom Financial - Concentrated Stock Holders: Five Cold Sequences* (Drive).
+
+**Campaign type:** Master bucket — employees and former employees of companies that IPO'd in the last 5 to 10 years, holding large low-basis positions. No public "selling signal" exists in bulk for this ICP, so targeting signal = long tenure at a post-IPO employer = likely vested, likely holding.
 **Client:** Mitchell Bloom / Bloom Financial · **Sequencer:** Instantly · **Merge field:** `{{firstName}}` only
-**Cadence:** E1 (day 0) → E2 (day 3, reply) → E3 (day 7) · **A/B:** 3/2/2
+**Cadence:** E1 (day 0) → E2 (day 3, reply) → E3 (day 7, new thread) · **A/B:** 4/2/2 · **3 steps, no 4th email.**
+**8 E1 variants written, 4 slots.** First-round picks: **E1-A** (what the tax takes) · **E1-F** (the ten percent question) · **E1-H** (QSBS) · **E1-E** (getting out of one position). QSBS is ranked in rather than out here because it is genuinely native to this ICP, unlike C3 where it reaches a minority.
+**List:** `_data/Mitchell Bloom - V2 Concentrated Stock - *` — mid-pipeline, VERIFY file not yet through MillionVerifier.
 
-**Angle (source of truth = July 14 strategy call + 2nd analysis + Playbook Insights):** holders delay selling *because* of the tax bill and the fear of being stuck in one position. The strongest, most compliant lever for this ICP is **liquidity + diversification** (Mitch's DST Playbook @28:47): defer the gain *and* spread the proceeds across other investments instead of staying stuck in one stock. Open with a question that self-qualifies the holder, then build trust in who Bloom is (specialization / media credibility / CPA-reviewed). No 1031 angle here (real-estate only). Reply-based CTA, no booking link in E1.
+**Angle:** same five angles as C1, adapted to a position rather than a property, so the account speaks in one voice across campaigns. Through-line is Mitch's Aug 5 phrase, ***"plan first, sell second."***
 
-**Trust builders (all verified):** (1) specialization — the one thing he does (intake USP); (2) media — featured in WSJ, MarketWatch, Business Insider, US News (2nd analysis Source Ledger, verified per intake); (3) transparency — sends the mechanism in writing, not a secret; (4) their own CPA reviews everything (@26:07). *Media-mention line needs Mitch's ad-review sign-off before send.*
+**Where this diverges from C1 (and why):**
+- **No 1031 / rollover angle.** Real-estate only. C1's "when the timing slips" variant has no equivalent here.
+- **E1-E replaces it with concentration risk** — the holder wants out of one position but the tax is what keeps them in, so the position grows and the problem compounds. Flagged in `Mitchell Bloom - Playbook Insights for Copy.md` as the strongest untapped lever for this ICP: *"defer the gain and let the proceeds spread across other asset classes."*
+- **No Kelly & David.** That is a $7.6M multifamily result and does not belong in a stock email.
+- **No property city merge field.** `{{firstName}}` only.
 
-**Plain English + jargon-free:** no "1031"/"Section 453"/"installment sale," no "IRS" (→ "taxes"). "Defer" kept as the accurate, non-promissory anchor. **No real-estate client figure in a stock email** — proof is the verified media credibility, not the Kelly & David property case.
+**🔄 Aug 5 changes folded in:** not-just-the-DST plurality across all five E1s · timing window in every E1 · "where people give up the most" · "no months of attorney meetings" in E3-B.
 
-**Banned (per call):** Rob Lowe, audit statistics, indemnification, pricing, "secret method," the "70% fail" stat (unverified). **"Defer," never "avoid."**
+**Deliberately excluded, both by Shara's call:** the *"you still pay the tax"* honesty beat (qualifies rather than intrigues — belongs in post-booking nurture) and any state-vs-federal percentage split.
 
-**CAN-SPAM:** footer carries the physical address (rule 4), a clear opt-out (rule 5), and an ad-identification line (rule 3). Honest subjects, incl. E3 (rule 2). Rules 6–7 operational at deploy.
-**Open items:** confirm postal address (intake address placeholder) · Mitch's disclaimer verbiage · ad-review sign-off on the WSJ/Business Insider line.
+**Plain English, jargon-free** in E1: no "Section 453," no "installment sale," no named code sections. **E2-A is the one exception** — names three structures with a plain-English gloss each. *Reverses the July 14 rule; needs Mitch's knowing sign-off.*
+
+**Trust builders (all verified):** specialization (the one thing he does, per intake USP) · transparency (sends the mechanism in writing) · their own CPA reviews everything.
+**⚠️ Media credibility (WSJ, MarketWatch, Business Insider, US News) is NOT used in this rewrite.** It was cut from E1 as too promotional for a cold open and then cut from E2. There is currently no third-party proof in this sequence. Deliberate, not an oversight.
+
+**Banned (per call):** Rob Lowe · audit statistics · indemnification · pricing · "secret method" · the "70% fail" stat (unverified). **"Defer," never "avoid."**
+
+**CAN-SPAM:** footer carries physical address (rule 4), clear opt-out (rule 5), ad-identification line (rule 3). Honest subjects incl. E3 (rule 2).
+
+**Spam check (mailmeteor local port):** all E1 and E3 bodies score **Great (0 hits)**. E2-A scores Poor from `sales` and `opportunity` — literal product names. Every full email is capped at Poor by the mandatory footer, which is a scoring artifact rather than a deliverability problem.
+
+**Open items:** disclaimer verbiage · the summary one-pager (offered in E1-A, E1-D and both E2s) · confirm "several / three / six" as one number · **E1-C assumes buyers have approached the holder about their shares** — common for employees at recently public companies but not verified per contact.
 
 ---
 
-## Subject lines (rotate across E1)
-1. `{{firstName}}, still holding?`
-2. `a thought on your shares`
-3. `the reason a lot of people hold`
-
-## E3 subject lines (new thread)
-1. `one more thing`
-2. `{{firstName}}, quick note`
+**Footer, every email:**
+```
+Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
+This is an advertisement.
+Reply "unsubscribe" and I'll take you off my list.
+[Disclaimer to be added by Bloom]
+```
 
 ---
 
-## E1 — day 0 (new thread)
+## E1 — Day 0 (new thread)
 
-### E1-A — the reason you're holding
-```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}},
-
-Are you holding a big position in your company stock mostly because of the
-tax you would owe if you sold?
-
-You are not alone. Selling a concentrated position can mean handing close
-to a third of the profit to taxes. A part of the tax code lets some people
-defer that and spread the proceeds across other investments, instead of
-leaving it all in one stock.
-
-{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at?}}
-
-{{RANDOM | Best | Talk soon | Warm regards}},
-
-Mitchell Bloom
-Bloom Financial
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
-```
-
-### E1-B — open question
-```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}},
-
-If you sold a chunk of your position tomorrow, do you know how much you
-would owe in taxes, and whether you would have to pay all of it this year?
-
-Most people assume the answer is yes. A part of the tax code lets some
-sellers defer it and move the proceeds into other investments over time,
-instead of staying stuck in one stock.
-
-{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at?}}
-
-{{RANDOM | Best | Talk soon | Warm regards}},
-
-Mitchell Bloom
-Bloom Financial
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
-```
-
-### E1-C — media credibility
-```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}},
-
-Has anyone shown you how some people defer the tax when they finally sell
-a big stock position, instead of paying a third of it all at once?
-
-This is the strategy I focus on, and I have been featured on it in the
-Wall Street Journal and Business Insider. It lets you defer the gain and
-diversify out of the position over time, and your CPA can review the whole
-thing first.
-
-{{RANDOM | Would it be okay if I sent over the mechanism on how it works? | If you are hesitant, I can share the specifics on how it works, and you can send it to your CPA. | Want me to send how it works so you can run it past your CPA? | Mind if I send it over for your CPA to look at?}}
-
-{{RANDOM | Best | Talk soon | Warm regards}},
-
-Mitchell Bloom
-Bloom Financial
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
-```
-
-### E1-D — Client Suggested Variant (pending ad-review) · subject: `before you sell your shares`
+### E1-A — what the tax takes
+Subjects: `what most people find out too late` · `{{firstName}}, before you sell` · `plan first, sell second` · `the part nobody mentions`
 ```
 Hi {{firstName}},
 
-Sitting on stock that's grown well beyond what you paid?
+When you sell a position you've held this long, close to a third of the
+gain goes to taxes that year. Most people don't realize there are several
+ways to defer it instead.
 
-You've probably been told the capital gains tax is just the price of
-cashing out. That's the old way: sell your shares first, and your CPA
-tells you what you owe after.
+They work about the same way. When you sell, the proceeds go into a
+structure rather than straight to you. You draw from it over time, and the
+tax spreads out instead of landing in one year.
 
-There's a newer way. Plan before you sell, and you can legally defer a big
-part of that tax and keep it working for you and your family instead of
-losing it to taxes.
+The one catch is it has to be set up before you sell.
 
-{{RANDOM | Happy to walk you and your CPA through it. Want me to? | Happy to send you how it works, for you and your CPA to look over. | Happy to show you how. Worth a look? | Can I send it over, so you can hand it to your CPA?}}
+Want me to send over the options?
 
 Mitchell
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
 ```
 
-*Client-suggested. Flags for ad-review: "legally defer" and "keep it working for you and your family" lean promissory; sign-off is "Mitchell" (informal). Kept verbatim per client.*
+### E1-B — plan first, sell second
+Subjects: `planning to sell?` · `plan first, retire second` · `where people give up the most` · `worth knowing before you sell`
+```
+Hi {{firstName}},
+
+Wanted to ask if you're thinking about selling any of the stock you've held
+for years.
+
+Most people focus on selling and handle the tax after. That's backwards,
+and it's where they give up the most, because by then there's nothing left
+to set up.
+
+What I recommend is simple. Plan first, sell second. More of it stays in
+your family instead of going to taxes.
+
+Happy to walk you and your CPA through it. Interested?
+
+Mitchell
+```
+
+### E1-C — the buyers coming to you
+Subjects: `the offers coming your way` · `{{firstName}}, on the buyers reaching out` · `before you take the offer` · `a question on your shares`
+```
+Hi {{firstName}},
+
+If you've been holding shares this long, you've probably had buyers
+approach you about them directly. Maybe more than a few.
+
+Most people don't find out what the tax takes until after they've agreed.
+By then it's done.
+
+A good part of it can be deferred, in more than one way, but it has to be
+in place before you sell.
+
+Want me to show you how it works?
+
+Mitchell
+```
+*Secondary-market buyers do approach long-tenured holders at recently public companies. Unverified per contact — see open items.*
+
+### E1-D — the deadline nobody mentions
+Subjects: `one thing worth knowing` · `{{firstName}}, the part people miss` · `what your CPA mentions a week late` · `the deadline nobody mentions`
+```
+Hi {{firstName}},
+
+Wanted to run this by you. Could be useful whether or not we ever talk.
+
+Any strategy that defers the tax has to be set up before you sell. Not
+after. Once the trade goes through there's nothing anyone can do, and
+plenty of people hear that from their CPA a week later.
+
+I've summarized a few of the options and the deadline on each.
+
+Want me to email it to you?
+
+Mitchell
+```
+
+### E1-E — getting out of one position *(C2-specific)*
+Subjects: `too much in one place` · `{{firstName}}, on the concentration` · `the reason people hold too long` · `worth having a way out`
+```
+Hi {{firstName}},
+
+Something worth having on your radar.
+
+Plenty of people end up with far more in one position than they'd choose
+to, and the reason they hold is the tax waiting on the other side. So the
+position gets bigger and it gets harder to unwind.
+
+There's a way to move out of it and spread the proceeds across other
+investments, with the tax spread out rather than landing at once. It has to
+be set up before you sell.
+
+Want me to send you how that's set up?
+
+Mitchell
+```
+*The liquidity + diversification lever. Replaces C1's failed-rollover variant, which has no stock equivalent.*
+
+### E1-F — the ten percent question *(added 2026-08-05)*
+Subjects: `the ten percent question` · `{{firstName}}, on the charitable piece` · `would you rather hand over a third` · `the option people dismiss too quickly`
+```
+Hi {{firstName}},
+
+One of the better options for a position held this long is a charitable
+remainder trust. Most people hear the word charitable and tune out.
+
+Worth hearing the rest. You're parting with around ten percent to a cause
+you pick, against closer to a third going to taxes. The remainder stays
+invested and pays you back over the years.
+
+It has to be set up before you sell.
+
+Want me to show you the comparison?
+
+Mitchell
+```
+*Recovers the CRUT by name plus Mitch's own objection handler from the Aug 5 call: "you only have to give away 10%, would you rather lose 35%?"*
+
+### E1-G — the one you can still do after selling *(added 2026-08-05)*
+Subjects: `the one you can still do after selling` · `{{firstName}}, if you already sold` · `the exception to the deadline` · `what's left if you've sold`
+```
+Hi {{firstName}},
+
+Most of these have to be set up before you sell. Opportunity zones are the
+exception.
+
+You have a window after the sale to move the gain into one, and the tax
+waits while it stays invested. If you've already sold this year, it's
+what's left.
+
+Not right for everyone, but worth knowing it exists.
+
+Want me to send over how it works?
+
+Mitchell
+```
+*⚠️ **The only variant that reaches someone who has already sold.** Everything else in the sequence is built on "before you sell, or never."*
+*Accuracy: the post-sale window for a qualified opportunity fund is real but the rules have been amended more than once. **Mitch to confirm.** Deliberately does not state a day count.*
+
+### E1-H — QSBS *(added 2026-08-05, C2 only)*
+Subjects: `your shares may already qualify` · `{{firstName}}, on when you got the stock` · `the exemption most holders miss` · `worth checking before you sell`
+```
+Hi {{firstName}},
+
+If your shares came from an early stage company, part of the gain may
+already qualify for an exemption. Most people holding that stock have never
+been told, and fewer know the exemption can sometimes be multiplied across
+family members.
+
+It depends on when you got the shares and what the company looked like then.
+
+Worth checking before you sell, because it can't be fixed afterward.
+
+Want me to send over how it works?
+
+Mitchell
+```
+*Recovers QSBS stacking, which Mitch raised via Valur on the Aug 5 call. "Multiplied across family members" carries the stacking concept without jargon he'd have to explain.*
+*⚠️ **Heavily hedged on purpose.** QSBS qualification is strict: C-corp original-issuance stock, five-year hold, size limits at issuance. "May already qualify" is doing deliberate work. **Mitch to confirm he advises on QSBS at all** before this sends under his name.*
 
 ---
 
-## E2 — day 3 (reply to E1, empty subject / threads)
+## E2 — Day 3 (reply on same thread, keeps E1 subject)
 
-### E2-A — the mechanism
+### E2-A — the structures, each in one line
 ```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}}, floating this up.
+Hi {{firstName}}, floating this back up.
 
-The idea is simpler than it sounds, and it has been in the tax code
-longer than most banks. At the sale, a couple of short lines in the
-closing papers send the money into a trust instead of straight to you.
+There are a few of these, and they're simpler than the names sound.
 
-You draw from it over time, and the tax is deferred, spread out instead
-of owed all at once. It is fully compliant, a normal part of the tax code.
+A deferred sales trust pays you out over time. A charitable remainder trust
+pays you out and sends the remainder to a cause you pick. Opportunity zones
+let you reinvest the gain instead of paying at closing. Which one fits
+depends on what you want the proceeds doing afterward.
 
-{{RANDOM | Want the one page overview? | Worth a two minute read? | Should I send it over?}}
+Want me to send it over?
 
-{{RANDOM | Best | Talk soon | Warm regards}},
-
-Mitchell Bloom
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
+Mitchell
 ```
+*Three structures rather than C1's four. No Delaware Statutory Trust — that is real-estate only.*
 
-### E2-B — the timing
+### E2-B — legitimacy, in plain words
 ```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}},
+Hi {{firstName}},
 
-One thing I should add: this only works if it is set up before you sign.
-Once the sale closes, the window is gone for good.
+None of this was invented yesterday. These have been in the tax code for
+decades, and it isn't a loophole.
 
-Happy to get you the overview before then.
+The point of it is simple. Instead of a third going to taxes the year you
+sell, the whole amount stays invested and you pay as you draw from it.
 
-{{RANDOM | Want me to send it? | Worth a look? | Should I send it over?}}
+Want me to send you the summary?
 
-{{RANDOM | Best | Talk soon | Warm regards}},
-
-Mitchell Bloom
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
+Mitchell
 ```
 
 ---
 
-## E3 — day 7 (new thread) · shared library
+## E3 — Day 7 (new thread) · final email
+Subjects: `one more thing` · `{{firstName}}, quick note` · `one last thought`
 
-### E3-A — working with your CPA
+### E3-A — working alongside their CPA
 ```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}},
+Hi {{firstName}},
 
-To be clear, this is not about replacing anyone on your team.
+To be clear, I'm not looking to replace anyone on your team.
 
-We work alongside your CPA, not around them. They review everything and
-stay in charge, and it gives them a role well past the sale. Most simply
-have not come across this before.
+Most CPAs don't do tax mitigation. It isn't a knock on yours, it just isn't
+what they work on day to day, so this rarely comes up.
 
-{{RANDOM | Want me to connect with them and walk them through it? | Can you intro me to see if we can get them onboard? | Want me to send it so you two can review it together? | Happy to send them the overview directly.}}
+I work with your CPA, not around them. They look at everything and they
+stay in charge.
 
-{{RANDOM | Best | Talk soon | Warm regards}},
+Happy to send it over so you can pass it along. Want me to?
 
-Mitchell Bloom
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
+Mitchell
 ```
 
-### E3-B — no cost to look
+### E3-B — no charge, no months of meetings
 ```
-{{RANDOM | Hi | Hey | Hello}} {{firstName}},
+Hi {{firstName}},
 
-One more note, then I will leave it with you.
+Last note from me, then I'll leave you be.
 
-There is no cost to look at this, or even to set it up, and no cost to
-explore it on a call. The work happens on our end, and you are welcome to
-bring your own attorney and CPA.
+There's no charge to look at this, or to set it up. Most of the work happens
+on my end. Your attorney and CPA still look at everything, it just doesn't
+turn into months of meetings on your calendar.
 
-You only decide if it is right once you and your CPA have seen exactly how
-it works.
+You decide once you've both seen exactly how it works.
 
-{{RANDOM | Want the overview? | Should I send it across? | Can I get it to your CPA?}}
+Want me to send it?
 
-{{RANDOM | Best | Talk soon | Warm regards}},
-
-Mitchell Bloom
-
-Bloom Financial, 390 Interlocken Crescent, Suite 350, Broomfield, CO 80021
-This is an advertisement.
-Reply "unsubscribe" and I'll take you off my list.
-
-[DISCLAIMER PLACEHOLDER]
+Mitchell
 ```
 
----
-
-*Copy grounded in the July 14 strategy call, the 2nd analysis (incl. its Source Ledger), the Playbook Insights, and the intake. Plain English, no "IRS," no real-estate client figure. Trust built through specialization, verified media credibility, and CPA review. Written to align with Mitch's disclaimer (general/hedged/non-promissory). CAN-SPAM: address + opt-out + ad-identification on every email. Nothing fabricated; postal address, disclaimer verbiage, and ad-review sign-off on the media line pending Mitch.*
+*Sources: Aug 5 call transcript, July 14 strategy call, intake avatar, DST Playbook + Playbook Insights. Nothing fabricated. Postal address and disclaimer pending Mitch.*
