@@ -8,7 +8,8 @@
 > **⚠️ "Residential" means two different things — do not filter on the word:**
 > Searches 1 and 2 below sit under PropStream's **`Residential` tab**, because that is where PropStream files **Multi-Family**. That does **not** make this the trophy/residential-homes campaign. Single Family, Condo, and Seasonal/Vacation are **never** selected here — those belong to Campaign 4. Go by property type, not by tab name.
 
-**Campaign 1:** Apartment / rental / commercial real-estate sellers — **individually owned, ON-MARKET first (just listed / under contract / pending).**
+**Campaign 1:** Apartment / rental / mobile-home-park sellers — **individually owned, ON-MARKET first (just listed / under contract / pending).**
+> **🔻 Commercial (Search 3) is DEFERRED as of 2026-08-05** — it is not sourceable cold via PropStream (no Estimated Value field on commercial records, most is LLC-held, most trades off-MLS). Search 3 is kept below for its diagnostics, but **do not run it as part of the current Campaign 1 list.** Commercial moves to Phase 2, sourced from LoopNet / Crexi.
 
 > **⭐ TIMING: ON-MARKET IS THE PRIMARY LIST (decision, 2026-07-29). Supersedes the July 24 off-market-only decision.**
 > Mitchell, comment on the copy doc (July 29): *"Very good. Would be optimal to find properties just listed and/or pending."*
@@ -87,7 +88,7 @@ Leave blank: Last Sale Price, Year Built, Estimated Equity %, Owner Occupied, In
 **Pending (separate search, per Mitch):** identical, but `MLS Status: Pending` only. Save as `Bloom — C1 — {City} — Rentals+MHP — Pending`.
 **Pass 2 backfill:** identical, but `MLS On/Off Market: Off Market`, and **clear MLS Listing Type + MLS Status**. Save as `... — Rentals+MHP — OffMkt`.
 
-## SEARCH 3 — COMMERCIAL
+## SEARCH 3 — COMMERCIAL  🔻 DEFERRED (2026-08-05, not part of the current run — see note at top; kept for diagnostics)
 
 > **⚠️ Property Classification is SINGLE-SELECT (confirmed in the UI, 2026-07-29).** Picking `Commercial` *replaces* `Residential`; it does not add to it. That is why the property types are split across separate searches rather than combined into one.
 >

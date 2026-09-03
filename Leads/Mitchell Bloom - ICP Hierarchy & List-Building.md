@@ -22,7 +22,7 @@ Status (Phase 1 / Phase 2 / PARKED) lives in the doc header, never in the number
 
 | Campaign | Copy doc | List files |
 |---|---|---|
-| C1 — Property sellers (apartment / rental / MHP / commercial) | `Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md` | `Leads/V1 …` |
+| C1 — Property sellers (apartment / rental / MHP) *(commercial deferred)* | `Copy/C1 - Property Sellers (Apartment, Rental, MHP, Commercial).md` | `Leads/V1 …` |
 | C2 — Concentrated-stock holders | `Copy/C2 - Concentrated-Stock Holders.md` | `Leads/V3 Stock Holders …`, `_data/V3 Stock Holders …` |
 | C3 — Business brokers (referral channel) | `Copy/C3 - Business Brokers (referral channel).md` | `Leads/V2 Brokers …`, `Leads/V2+V3 Brokers …` ⚠️ |
 | C4 — Trophy / residential owners (2 variants) | `Copy/C4 - Trophy-Residential Owners (…).md` | not built |
@@ -65,8 +65,8 @@ removes both collisions at once.
 
 | Rank | Campaign | Source | Copy | Phase |
 |---|---|---|---|---|
-| **1** | **Apartment / rental / commercial RE sellers** (individually owned) | PropStream | ❌ to write | 🟢 Phase 1 |
-| **2** | **Concentrated stock holders** (recently-IPO'd cos) | Apollo + LinkedIn | ✅ C2 | 🟢 Phase 1 |
+| **1** | **Apartment / rental / mobile-home-park sellers** (individually owned) *(commercial deferred)* | PropStream | ❌ to write | 🟢 Phase 1 |
+| **2** | **Concentrated stock holders** (85% older public cos, 15% recent IPOs) | **Blitz** | ✅ C2 | 🟢 Phase 1 · list built, 7,499 |
 | **3** | **Business brokers** (~8,800 nationwide) 🔄 *replaced business sellers Aug 5* | **BizBuySell directory scrape** (+ IBBA, Apollo/Blitz enrich) | ❌ to write | 🟢 Phase 1 |
 | 4 | Trophy / residential home owners | PropStream | ✅ C4 (×2) | 🟡 Phase 2 |
 | 5 | Business sellers ($2M–$20M) 🔄 *parked Aug 5, was Campaign 3* | Marketplaces + Apollo | ✅ C5 | 🟠 Parked — sellers anonymized |
@@ -79,18 +79,21 @@ removes both collisions at once.
 > **Why this order:** Campaign 1 is ~70% of Mitch's existing trust business and his explicit July 15 instruction. Campaign 2 is the LGJ data team's "easiest + most receptive." Campaign 3 is now the **broker channel**, which is sourceable and responsive, where the direct-seller list is neither. Trophy homes are build-ready (filters + copy done) but demoted as a priority call.
 
 --------------------------------------------------------------------
-### 🟢 CAMPAIGN 1 — APARTMENT / RENTAL / COMMERCIAL RE SELLERS  ⭐ lead segment
+### 🟢 CAMPAIGN 1 — APARTMENT / RENTAL / MOBILE-HOME-PARK SELLERS  ⭐ lead segment
 *Added to initial focus by Mitch's July 15 email. Source: PropStream.*
 
-**Who — the three Mitch named, all in scope (individually owned only):**
+> **🔻 Commercial dropped (2026-08-05)** — not sourceable cold via PropStream (no Estimated Value field, LLC-held, off-MLS). Built list = apartments + rentals/MHP. Commercial deferred to Phase 2 via LoopNet / Crexi.
+
+**Who — the segments in scope (individually owned only):**
 1. **Apartment sellers** — small apartment buildings (2–20 units)
 2. **Rental property sellers** — duplex / triplex / quad + small rental portfolios (owners of ~5–11 rentals looking to exit) + **mobile-home parks** ("an incredible target")
-3. **Commercial real-estate sellers** — small commercial / strip mall / raw land
 
-**Exclude:** corporate, private-equity, institutional. Those have no reachable person/email. Expect the **commercial** list to be the smallest of the three (more of it is LLC-held).
+*(Commercial real-estate sellers — small commercial / strip mall / raw land — attempted and deferred; see note above.)*
+
+**Exclude:** corporate, private-equity, institutional. Those have no reachable person/email.
 
 **How to find (PropStream — paste-ready configs in `Leads/Mitchell Bloom - PropStream Filters Launch.md`, the doc to run):**
-- Property Type = Multi-Family 2–4 / 5+, Duplex / Triplex / Quadruplex, Mobile Home or Trailer Park (+ small commercial where available)
+- Property Type = Multi-Family 2–4 / 5+, Duplex / Triplex / Quadruplex, Mobile Home or Trailer Park
 - **Owner Type = Individual** ← the LLC-stripping filter that makes the reachable slice sourceable
 - Estimated Value tiered by market ($2M+ floor) · Years of Ownership 15+ · Pre-Probate **Exclude** (stepped-up basis erases the gain) · High Equity
 - High-tax-state market list (below)
@@ -104,7 +107,70 @@ removes both collisions at once.
 
 --------------------------------------------------------------------
 ### 🟢 CAMPAIGN 2 — CONCENTRATED STOCK HOLDERS  ⭐ highest confidence ("the easiest")
-*Source: Apollo + LinkedIn. Copy: `Copy/C2 - Concentrated-Stock Holders.md` (written).*
+*Source: **Blitz** (LinkedIn-derived), not Apollo. Copy: `Copy/C2 - Concentrated-Stock Holders.md` (written).*
+*List: `Leads/V3 Stock Holders - INSTANTLY UPLOAD.csv`, **7,499 verified**. Method: `Leads/Mitchell Bloom - V3 Stock Holders (list + method).md`.*
+
+> **⚠️ Built and verified 2026-08-10. The list that exists differs materially from the ICP
+> as originally written.** The section below states what the list *is*. The original
+> intent is preserved underneath it, because the gap is a decision to revisit, not an
+> error to hide.
+
+**Who it actually is:** **current** employees, 5+ years at their employer, at companies
+whose stock appreciated substantially, so shares were granted at much lower prices and
+carry large unrealized gains. Tenure minimum 5.0 years, median 13.2.
+
+| Company | Rows | Share |
+|---|---|---|
+| Apple | 3,244 | 43.3% |
+| Microsoft | 1,495 | 19.9% |
+| NVIDIA | 759 | 10.1% |
+| Airbnb | 629 | 8.4% |
+| Tesla | 364 | 4.9% |
+| Adobe | 361 | 4.8% |
+
+Apple and Microsoft alone are **63%**. Geography: CA 74.2%, WA 17.6%, NY 3.9%, everything
+else under 2%. By city: Bay Area ~61%, Seattle metro ~16%, Los Angeles 3.4%, New York 3.4%.
+
+**Five claims in the original ICP that the built list does not support:**
+
+1. **"Employees and former employees."** No former employees. Every row is a current
+   employee, filtered on `job_is_current`.
+2. **"SpaceX, NVIDIA, Uber."** SpaceX is **5 rows**, Uber is **34**. Only NVIDIA holds up
+   at 759. Uber was 973 until the 2026-08-10 re-verification, when their mail server
+   blocked the SMTP probes and 953 rows moved to
+   `_data/V3 Stock Holders - WAVE 2 (verifier-blocked domains).csv`. SpaceX was never
+   large here (235 at its widest) because the company is young and private.
+3. **"Companies that IPO'd in the last 5-10 years."** That cohort is roughly **15%** of
+   the list. **85% is older public companies.** The widening was deliberate, because
+   Mitch's own archetype at [18:50] is a 30-year UPS employee and UPS IPO'd in 1999, but
+   it was never ratified.
+4. **"High-tax metros ... Seattle."** Washington has **no state income tax**. Those 1,318
+   rows face 23.8% federal only, so the "losing a third of their gains" line is a
+   California number and does not apply to them.
+5. **"Los Angeles and New York."** 3.4% each. Real but marginal, not a concentration.
+
+**Two claims that do hold:** 5+ years tenure (minimum is exactly 5.0), and broad
+seniority (no title filter, minus 23 verified founders and officers removed deliberately
+on receptivity grounds per Jay at [25:28]).
+
+**Client-safe description:**
+
+> Current employees with five or more years at companies whose stock has appreciated
+> substantially, so their shares were granted at much lower prices and carry large
+> unrealized gains. Weighted toward long-tenured staff at established tech companies
+> (Apple, Microsoft, NVIDIA, Tesla, Adobe), with a smaller group from recent IPOs such as
+> Airbnb. Concentrated in the Bay Area, with Seattle second. No seniority filter, since
+> the biggest surprise gains often sit with long-tenured non-executive staff.
+
+**Open decisions, not defects:**
+- Sending wave 2 restores Uber to 973 and Broadcom to 936. Those addresses are valid; the
+  domains refused verification probes. Held on separate inboxes pending first-send data.
+- Restoring SpaceX and Uber to the weight the ICP implies needs a different company
+  universe, not a filter change.
+
+---
+
+**Original ICP intent, as written before the build (retained for reference):**
 
 **Who:** long-tenured / early employees holding concentrated, highly appreciated stock at companies that IPO'd in the last 5–10 years with broad employee equity. Examples raised: **SpaceX, NVIDIA, Uber, Yahoo**; the 30-year employee with founder-priced shares. Concentrated in high-tax states.
 
@@ -114,6 +180,9 @@ removes both collisions at once.
 - **Person Location:** SF Bay Area, San Jose, LA, Seattle, NYC + high-tax states
 - **Seniority: broad** — do NOT restrict to execs; rank-and-file hold the biggest surprise gains (equity is a tenure story, not a seniority story)
 - **Email status:** Verified
+
+*Apollo was never used. The in-house seat is 100 monthly credits with Revenue and Lookalike
+filters locked, which is a demo seat rather than a sourcing tool. Blitz replaced it.*
 
 --------------------------------------------------------------------
 ### 🟢 CAMPAIGN 3 — BUSINESS BROKERS (~8,800 nationwide)  🔄 *new as of Aug 5*
@@ -231,12 +300,12 @@ removes both collisions at once.
 We reach people who are about to sell a highly appreciated asset and want to avoid the large capital-gains hit at closing — while there's still time to put your strategy in place before the sale closes.
 
 ### THE FIRST THREE CAMPAIGNS
-> **Campaign 1:** Sellers of apartment buildings, mobile-home parks, rentals and commercial property
+> **Campaign 1:** Sellers of apartment buildings, mobile-home parks and rental properties
 > **Campaign 2:** Holders of highly appreciated company stock
 > **Campaign 3:** Business brokers who are actively selling businesses right now
 > *Next up (already prepared):* owners of trophy / luxury homes, plus holders of large crypto / Bitcoin gains.
 
-### CAMPAIGN 1 — SELLERS OF APARTMENTS, MOBILE-HOME PARKS, RENTALS & COMMERCIAL PROPERTY
+### CAMPAIGN 1 — SELLERS OF APARTMENTS, MOBILE-HOME PARKS & RENTAL PROPERTIES
 - **Who they are:** Independent, family-owned owners heading for a sale. We exclude corporate, private-equity and institutionally owned property. We're also looking at farmland as a possible addition.
 - **Why they fit:** This is the closest match to where your business already comes from.
 - **Worth knowing:** These owners usually hold property through an LLC or trust, so we pull them from property records rather than a contact database. We reach the independently-owned ones directly; those lists take a little longer to build and refine. Farmland we're treating as a question to confirm, not a commitment.

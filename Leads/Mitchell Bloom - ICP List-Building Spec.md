@@ -3,7 +3,7 @@
 **Purpose:** Build-ready ICP breakdown for list construction, **ordered by priority hierarchy**. Reconciles three sources of truth — the **July 14 strategy call**, the **intake form**, and Mitch's **two emails (July 8 pre-call ICP questions + July 15 post-call reply)** — with an Apollo/PropStream filter set per ICP.
 
 **Scoped to 3 launch campaigns July 24, 2026.** Phase 1 = exactly **three campaigns**, each its own sequence + tracked separately:
-1. **Apartment / rental / commercial RE sellers** (individually owned) — PropStream
+1. **Apartment / rental / mobile-home-park sellers** (individually owned) — PropStream *(commercial dropped 2026-08-05 — not sourceable cold; deferred to Phase 2)*
 2. **Concentrated stockholders** — Apollo (+ SEC EDGAR filings, added Aug 5)
 3. **Business brokers** (~8,800) — **BizBuySell directory scrape** 🔄 *replaced "business owners, master bucket" on Aug 5*
 
@@ -21,7 +21,7 @@ This matches the strategy call's original 3-audience structure and Mitch's core 
 
 | Rank | ICP | Source | Phase |
 |---|---|---|---|
-| **Campaign 1** | **Apartment / rental / commercial RE sellers** (individually owned) | PropStream | 🟢 **Phase 1 — build now** |
+| **Campaign 1** | **Apartment / rental / mobile-home-park sellers** (individually owned) *(commercial dropped — deferred)* | PropStream | 🟢 **Phase 1 — build now** |
 | **Campaign 2** | **Concentrated stockholders** (IPO'd cos) | Apollo | 🟢 Phase 1 |
 | **Campaign 3** | **Business brokers** (~8,800) 🔄 *new Aug 5* | **BizBuySell scrape** + IBBA → Apollo/Blitz enrich | 🟢 Phase 1 |
 | 4 | Trophy / residential home owners | PropStream | 🟡 **Phase 2 — ready, launch when promoted** |
@@ -55,19 +55,22 @@ This matches the strategy call's original 3-audience structure and Mitch's core 
 
 # 🟢 PHASE 1 — the 3 launch campaigns (build now)
 
-## Campaign 1 — Apartment / rental / commercial real-estate sellers (individually owned)  ⭐ lead segment
+## Campaign 1 — Apartment / rental / mobile-home-park sellers (individually owned)  ⭐ lead segment
 **Source: PropStream.** Paste-ready filter configs + full city list in **`Leads/Mitchell Bloom - PropStream Filters Launch.md`** (the doc to run). Click-by-click method, cost rules, and troubleshooting rationale in `Leads/Mitchell Bloom - PropStream Filter Spec.md` (trophy / Campaign 4 doc, reference only).
 
-**Who — the three Mitch named for the first campaign, all in scope:**
+> **🔻 Commercial dropped from this segment (2026-08-05).** Individually-owned commercial sellers are not sourceable cold via PropStream: commercial records carry no Estimated Value field, most commercial is LLC-held (stripped by Owner Type = Individual), and most trades off-MLS. The built list (`V1 COMBINED`) is apartments + rentals/MHP only. Commercial moves to **Phase 2**, to be sourced from **LoopNet / Crexi** rather than PropStream. See ICP 7 (institutional/LLC commercial, already deferred). The C1 copy is asset-agnostic and still fits any commercial owner who surfaces.
+
+**Who — the segments in scope for the first campaign:**
 1. **Apartment sellers** — small apartment buildings (2–20 units)
 2. **Rental property sellers** — duplex / triplex / quad + small rental portfolios + mobile-home parks (*"an incredible target"*)
-3. **Commercial real-estate sellers** — small commercial / strip mall
 
-All **individually owned only** (Mitch: *"ma-pa"*; explicitly **exclude PE / institutional / corporate** — those have no reachable person/email). **Expect the commercial list to be the smallest of the three** (more of it is LLC-held).
+*(Commercial real-estate sellers — small commercial / strip mall — attempted and deferred; see the note above.)*
 
-**Why #1:** ~70% of Mitch's existing trust business is apartments + commercial RE, and his July 15 email put these in the initial focus. The **Owner Type = Individual** filter is the LLC-stripping workaround that makes the reachable slice sourceable (the same method that works for trophy homes).
+All **individually owned only** (Mitch: *"ma-pa"*; explicitly **exclude PE / institutional / corporate** — those have no reachable person/email).
 
-**PropStream method:** Property Type = Multi-Family 2–4 / 5+, Duplex/Triplex/Quadruplex, Mobile Home or Trailer Park (+ small commercial where available) · Owner Type **Individual** · Years of Ownership 15+ · Pre-Probate **Exclude** · High Equity · high-tax-state market list.
+**Why #1:** ~70% of Mitch's existing trust business is apartments + commercial RE, and his July 15 email put these in the initial focus. The **Owner Type = Individual** filter is the LLC-stripping workaround that makes the reachable slice sourceable (the same method that works for trophy homes) — it reaches apartments/rentals/MHP but *not* commercial, which is why commercial is deferred.
+
+**PropStream method:** Property Type = Multi-Family 2–4 / 5+, Duplex/Triplex/Quadruplex, Mobile Home or Trailer Park · Owner Type **Individual** · Years of Ownership 15+ · Pre-Probate **Exclude** · High Equity · high-tax-state market list.
 **⭐ ON-MARKET PRIMARY (2026-07-29, per Mitch — supersedes the July 24 off-market call below):** Mitch, comment on the copy doc: *"Very good. Would be optimal to find properties just listed and/or pending."* So: **On Market** (Listing Type For Sale; Status Active, Active Under Contract, Coming Soon, Contingent) is the primary list, **Pending** runs as its own separate list, and **Off Market** is the secondary volume backfill. Full recipe in `Leads/Mitchell Bloom - PropStream Filters Launch.md`.
 
 > *Superseded reasoning, kept for context (July 24):* on-market-only produced rounding-error counts (SF apartments: 509 qualified owners → **6** actively listed), and off-market is arguably the better-timed list for a DST since the trust must be set up **before** a sale closes. Mitch's own call language — *"people actually delay selling because they don't want to pay that capital gains"* — describes off-market holders. That volume problem is real and has not gone away, which is why off-market stays as the backfill rather than being dropped. But the priority call is the client's, and he made it.
@@ -160,8 +163,8 @@ Individual owners of high-value, long-held homes (bought decades ago, huge appre
 ## ICP 10 — CPAs  ❌ raised Aug 5, not scoped
 Mitch, same call: *"maybe we approach CPAs at some point."* Same logic as the brokers — CPAs steer clear of tax-mitigation structures (CRTs, opportunity zones, DSTs, 1031s) out of audit fear or unfamiliarity, so their clients leave money on the table. A second referral channel. **No source, filters or copy defined.**
 
-## ICP 7 — Institutional / LLC-veiled commercial RE  ❌ deferred
-Large commercial, strip malls, office, raw land held behind **LLCs / corps / trusts**. On the call this was ~70% of Mitch's existing trust business, but it **cannot be sourced cold at scale** (no individual, no email). Revisit via county records / a "needle in a haystack" test after Phase 1 is live. *(ICP 1 already captures the individually-owned overlap.)*
+## ICP 7 — Commercial RE (individually-owned + institutional / LLC-veiled)  ❌ deferred
+Large commercial, strip malls, office, raw land held behind **LLCs / corps / trusts**. On the call this was ~70% of Mitch's existing trust business, but it **cannot be sourced cold at scale** via PropStream (no individual, no email; and commercial records carry no Estimated Value field). **As of 2026-08-05 this now also covers individually-owned commercial**, which was tried in Campaign 1 and pulled — see the Campaign 1 note. Revisit in Phase 2 via **LoopNet / Crexi**, county records, or a "needle in a haystack" test once Phase 1 is live.
 
 ## ICP 8 — Farmland  ❌ unvalidated — scope before committing
 Mitch floated it (*"maybe farmland"*) July 15 — note the hedge. **Not validated:** no agreed deal-size floor, and the biggest US farmland sits **outside** the high-tax states that power the pitch, so the offer is weaker there. Same LLC/trust veiling as ICP 7. **Resolve first:** (a) does farmland volume exist *in the target states*; (b) which source returns owner contact data. Do not build until answered.
